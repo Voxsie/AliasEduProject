@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Monoton-Regular.ttf</string>
+        <string>Inter-SemiBold.ttf</string>
+        <string>TT Commons Pro Expanded Black.ttf</string>
+        <string>TTCommons-Light.ttf</string>
+        <string>TTCommons-Medium.ttf</string>
+        <string>Inter-Light.otf</string>
+        <string>Inter-Medium.otf</string>
+        <string>Inter-Regular.otf</string>
+        <string>Inter.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

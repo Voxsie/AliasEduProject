@@ -18,6 +18,20 @@
 		AAC39C812A1411BE00B47B3A /* SelectWordPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C802A1411BE00B47B3A /* SelectWordPackViewController.swift */; };
 		AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C822A1411C700B47B3A /* GameSettingsViewController.swift */; };
 		AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C842A1411CF00B47B3A /* GameViewController.swift */; };
+		AAC39C872A14125700B47B3A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C862A14125700B47B3A /* Colors.xcassets */; };
+		AAC39C8A2A14135100B47B3A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C892A14135100B47B3A /* UIColor.swift */; };
+		AAC39C8E2A14147F00B47B3A /* Monoton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C8D2A14147F00B47B3A /* Monoton-Regular.ttf */; };
+		AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C8F2A14148E00B47B3A /* UIFont.swift */; };
+		AAC39C932A1415C600B47B3A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AAC39C922A1415C600B47B3A /* SnapKit */; };
+		AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C952A141CE700B47B3A /* PrimaryButton.swift */; };
+		AAC39C9F2A141D9900B47B3A /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C972A141D9900B47B3A /* Inter-Medium.otf */; };
+		AAC39CA02A141D9900B47B3A /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C982A141D9900B47B3A /* Inter.ttf */; };
+		AAC39CA12A141D9900B47B3A /* TTCommons-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C992A141D9900B47B3A /* TTCommons-Medium.ttf */; };
+		AAC39CA22A141D9900B47B3A /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9A2A141D9900B47B3A /* Inter-Regular.otf */; };
+		AAC39CA32A141D9900B47B3A /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9B2A141D9900B47B3A /* Inter-Light.otf */; };
+		AAC39CA42A141D9900B47B3A /* TTCommons-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */; };
+		AAC39CA52A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */; };
+		AAC39CA62A141D9900B47B3A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +48,19 @@
 		AAC39C802A1411BE00B47B3A /* SelectWordPackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWordPackViewController.swift; sourceTree = "<group>"; };
 		AAC39C822A1411C700B47B3A /* GameSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
 		AAC39C842A1411CF00B47B3A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AAC39C862A14125700B47B3A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		AAC39C892A14135100B47B3A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AAC39C8D2A14147F00B47B3A /* Monoton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Monoton-Regular.ttf"; sourceTree = "<group>"; };
+		AAC39C8F2A14148E00B47B3A /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		AAC39C952A141CE700B47B3A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		AAC39C972A141D9900B47B3A /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
+		AAC39C982A141D9900B47B3A /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
+		AAC39C992A141D9900B47B3A /* TTCommons-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Medium.ttf"; sourceTree = "<group>"; };
+		AAC39C9A2A141D9900B47B3A /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
+		AAC39C9B2A141D9900B47B3A /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
+		AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Light.ttf"; sourceTree = "<group>"; };
+		AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons Pro Expanded Black.ttf"; sourceTree = "<group>"; };
+		AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC39C932A1415C600B47B3A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +97,9 @@
 				AAC39C752A1410D300B47B3A /* Modules */,
 				AAC39C742A1410C300B47B3A /* Navigation */,
 				AAC39C732A14103E00B47B3A /* AppDelegates */,
-				AAC39C642A140EFB00B47B3A /* Assets.xcassets */,
+				AAC39C942A141CD800B47B3A /* UIKit */,
+				AAC39C882A14134100B47B3A /* Extensions */,
+				AAC39C8B2A14146100B47B3A /* Resources */,
 				AAC39C662A140EFB00B47B3A /* LaunchScreen.storyboard */,
 				AAC39C692A140EFB00B47B3A /* Info.plist */,
 			);
@@ -154,6 +184,49 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		AAC39C882A14134100B47B3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AAC39C892A14135100B47B3A /* UIColor.swift */,
+				AAC39C8F2A14148E00B47B3A /* UIFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AAC39C8B2A14146100B47B3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAC39C8C2A14147400B47B3A /* Fonts */,
+				AAC39C642A140EFB00B47B3A /* Assets.xcassets */,
+				AAC39C862A14125700B47B3A /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AAC39C8C2A14147400B47B3A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AAC39C8D2A14147F00B47B3A /* Monoton-Regular.ttf */,
+				AAC39C9B2A141D9900B47B3A /* Inter-Light.otf */,
+				AAC39C972A141D9900B47B3A /* Inter-Medium.otf */,
+				AAC39C9A2A141D9900B47B3A /* Inter-Regular.otf */,
+				AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */,
+				AAC39C982A141D9900B47B3A /* Inter.ttf */,
+				AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */,
+				AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */,
+				AAC39C992A141D9900B47B3A /* TTCommons-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AAC39C942A141CD800B47B3A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				AAC39C952A141CE700B47B3A /* PrimaryButton.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +243,9 @@
 			dependencies = (
 			);
 			name = AliasApp;
+			packageProductDependencies = (
+				AAC39C922A1415C600B47B3A /* SnapKit */,
+			);
 			productName = AliasApp;
 			productReference = AAC39C582A140EFA00B47B3A /* AliasApp.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +274,9 @@
 				Base,
 			);
 			mainGroup = AAC39C4F2A140EFA00B47B3A;
+			packageReferences = (
+				AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = AAC39C592A140EFA00B47B3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -212,7 +291,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC39CA62A141D9900B47B3A /* Inter-SemiBold.ttf in Resources */,
+				AAC39C8E2A14147F00B47B3A /* Monoton-Regular.ttf in Resources */,
+				AAC39CA32A141D9900B47B3A /* Inter-Light.otf in Resources */,
+				AAC39CA22A141D9900B47B3A /* Inter-Regular.otf in Resources */,
+				AAC39CA12A141D9900B47B3A /* TTCommons-Medium.ttf in Resources */,
+				AAC39C872A14125700B47B3A /* Colors.xcassets in Resources */,
+				AAC39CA52A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf in Resources */,
 				AAC39C682A140EFB00B47B3A /* LaunchScreen.storyboard in Resources */,
+				AAC39CA02A141D9900B47B3A /* Inter.ttf in Resources */,
+				AAC39C9F2A141D9900B47B3A /* Inter-Medium.otf in Resources */,
+				AAC39CA42A141D9900B47B3A /* TTCommons-Light.ttf in Resources */,
 				AAC39C652A140EFB00B47B3A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,9 +319,12 @@
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
+				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
+				AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */,
 				AAC39C5C2A140EFA00B47B3A /* AppDelegate.swift in Sources */,
 				AAC39C722A14103500B47B3A /* SceneDelegate.swift in Sources */,
 				AAC39C812A1411BE00B47B3A /* SelectWordPackViewController.swift in Sources */,
+				AAC39C8A2A14135100B47B3A /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +532,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAC39C922A1415C600B47B3A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AAC39C502A140EFA00B47B3A /* Project object */;
 }
