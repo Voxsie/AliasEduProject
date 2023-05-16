@@ -32,6 +32,7 @@
 		AAC39CA42A141D9900B47B3A /* TTCommons-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */; };
 		AAC39CA52A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */; };
 		AAC39CA62A141D9900B47B3A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */; };
+		AAC39CAA2A14240C00B47B3A /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CA92A14240C00B47B3A /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Light.ttf"; sourceTree = "<group>"; };
 		AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons Pro Expanded Black.ttf"; sourceTree = "<group>"; };
 		AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		AAC39CA92A14240C00B47B3A /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC39C952A141CE700B47B3A /* PrimaryButton.swift */,
+				AAC39CA92A14240C00B47B3A /* LoaderView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				AAC39C702A140F7400B47B3A /* AppCoordinator.swift in Sources */,
 				AAC39C7F2A1411AD00B47B3A /* MakeTeamsViewController.swift in Sources */,
 				AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */,
+				AAC39CAA2A14240C00B47B3A /* LoaderView.swift in Sources */,
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
