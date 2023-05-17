@@ -43,7 +43,7 @@ class PrimaryButton: UIButton {
         let label = UILabel()
         label.isUserInteractionEnabled = false
         label.adjustsFontSizeToFitWidth = false
-        label.font = .inter(type: .medium, size: 17)
+        label.font = .TTCommons(type: .demiBold, size: 17)
         return label
     }()
     

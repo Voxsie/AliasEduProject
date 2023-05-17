@@ -10,6 +10,8 @@ import SnapKit
 
 class MainMenuViewController: UIViewController {
     
+    var viewModel: MainScreenViewModel!
+    
     fileprivate lazy var bottomMenuBackgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -35,7 +37,7 @@ class MainMenuViewController: UIViewController {
        let label = UILabel()
         label.text = "© 2023 Alias"
         label.textColor = .generalBlack
-        label.font = .inter(type: .medium, size: 12)
+        label.font = .TTCommonsBlack(size: 12)
         return label
     }()
     
@@ -61,10 +63,21 @@ class MainMenuViewController: UIViewController {
         return sv
     }()
     
+    init(withViewModel viewModel: MainScreenViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+        setupNavigationController()
     }
     
     private func setupView() {
@@ -107,15 +120,26 @@ class MainMenuViewController: UIViewController {
         settingsButton.snp.makeConstraints { make in
             make.height.width.equalTo(50)
         }
-        
         startGameButton.snp.makeConstraints { make in
             make.height.equalTo(50)
         }
+        startGameButton.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         
         rulesButton.snp.makeConstraints { make in
             make.height.equalTo(50)
         }
-        
     }
+    
+    private func setupNavigationController() {
+        self.navigationController?.navigationBar.tintColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    @objc
+    func startGame() {
+//        AppCoordinator.shared.showTeamScreen()
+        self.navigationController?.pushViewController(MakeTeamsViewController(withViewModel: MakeTeamViewModel()), animated: true)
+    }
+
 }
 

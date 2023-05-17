@@ -14,7 +14,6 @@
 		AAC39C702A140F7400B47B3A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C6F2A140F7400B47B3A /* AppCoordinator.swift */; };
 		AAC39C722A14103500B47B3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C712A14103500B47B3A /* SceneDelegate.swift */; };
 		AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C7C2A1411A500B47B3A /* AppSettingsViewController.swift */; };
-		AAC39C7F2A1411AD00B47B3A /* MakeTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C7E2A1411AD00B47B3A /* MakeTeamsViewController.swift */; };
 		AAC39C812A1411BE00B47B3A /* SelectWordPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C802A1411BE00B47B3A /* SelectWordPackViewController.swift */; };
 		AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C822A1411C700B47B3A /* GameSettingsViewController.swift */; };
 		AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C842A1411CF00B47B3A /* GameViewController.swift */; };
@@ -26,13 +25,35 @@
 		AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C952A141CE700B47B3A /* PrimaryButton.swift */; };
 		AAC39C9F2A141D9900B47B3A /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C972A141D9900B47B3A /* Inter-Medium.otf */; };
 		AAC39CA02A141D9900B47B3A /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C982A141D9900B47B3A /* Inter.ttf */; };
-		AAC39CA12A141D9900B47B3A /* TTCommons-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C992A141D9900B47B3A /* TTCommons-Medium.ttf */; };
 		AAC39CA22A141D9900B47B3A /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9A2A141D9900B47B3A /* Inter-Regular.otf */; };
 		AAC39CA32A141D9900B47B3A /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9B2A141D9900B47B3A /* Inter-Light.otf */; };
-		AAC39CA42A141D9900B47B3A /* TTCommons-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */; };
 		AAC39CA52A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */; };
 		AAC39CA62A141D9900B47B3A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */; };
 		AAC39CAA2A14240C00B47B3A /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CA92A14240C00B47B3A /* LoaderView.swift */; };
+		AAC39CAC2A155B2D00B47B3A /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CAB2A155B2D00B47B3A /* MainScreenViewModel.swift */; };
+		AAC39CAE2A155CDA00B47B3A /* MakeTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CAD2A155CDA00B47B3A /* MakeTeamsViewController.swift */; };
+		AAC39CB02A15602D00B47B3A /* TitleWithImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CAF2A15602D00B47B3A /* TitleWithImageTableViewCell.swift */; };
+		AAC39CC32A15673F00B47B3A /* TTCommons-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CBA2A15647200B47B3A /* TTCommons-DemiBold.ttf */; };
+		AAC39CC42A15673F00B47B3A /* TTCommons-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB42A15647100B47B3A /* TTCommons-Light.ttf */; };
+		AAC39CC52A15673F00B47B3A /* TTCommons-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CC12A15647200B47B3A /* TTCommons-ExtraLightItalic.ttf */; };
+		AAC39CC62A15673F00B47B3A /* TTCommons-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CC22A15647200B47B3A /* TTCommons-Medium.ttf */; };
+		AAC39CC72A15673F00B47B3A /* TTCommons-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CBD2A15647200B47B3A /* TTCommons-MediumItalic.ttf */; };
+		AAC39CC82A15673F00B47B3A /* TTCommons-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB72A15647200B47B3A /* TTCommons-ExtraBold.ttf */; };
+		AAC39CC92A15673F00B47B3A /* TTCommons-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB12A15647100B47B3A /* TTCommons-LightItalic.ttf */; };
+		AAC39CCA2A15673F00B47B3A /* TTCommons-DemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CBC2A15647200B47B3A /* TTCommons-DemiBoldItalic.ttf */; };
+		AAC39CCB2A15673F00B47B3A /* TTCommons-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB62A15647200B47B3A /* TTCommons-Black.ttf */; };
+		AAC39CCC2A15673F00B47B3A /* TTCommons-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CBB2A15647200B47B3A /* TTCommons-Italic.ttf */; };
+		AAC39CCD2A15673F00B47B3A /* TTCommons-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CC02A15647200B47B3A /* TTCommons-ThinItalic.ttf */; };
+		AAC39CCE2A15673F00B47B3A /* TTCommons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB32A15647100B47B3A /* TTCommons-Regular.ttf */; };
+		AAC39CCF2A15673F00B47B3A /* TTCommons-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB82A15647200B47B3A /* TTCommons-BlackItalic.ttf */; };
+		AAC39CD02A15673F00B47B3A /* TTCommons-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB22A15647100B47B3A /* TTCommons-ExtraBoldItalic.ttf */; };
+		AAC39CD12A15673F00B47B3A /* TTCommons-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB52A15647200B47B3A /* TTCommons-Bold.ttf */; };
+		AAC39CD22A15673F00B47B3A /* TTCommons-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CBF2A15647200B47B3A /* TTCommons-ExtraLight.ttf */; };
+		AAC39CD32A15673F00B47B3A /* TTCommons-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CBE2A15647200B47B3A /* TTCommons-Thin.ttf */; };
+		AAC39CD42A15673F00B47B3A /* TTCommons-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAC39CB92A15647200B47B3A /* TTCommons-BoldItalic.ttf */; };
+		AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CD52A1568B300B47B3A /* MakeTeamViewModel.swift */; };
+		AAC39CD92A15699000B47B3A /* LetterAvatarKit in Frameworks */ = {isa = PBXBuildFile; productRef = AAC39CD82A15699000B47B3A /* LetterAvatarKit */; };
+		AAC39CDC2A156DD400B47B3A /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CDB2A156DD400B47B3A /* TeamModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +66,6 @@
 		AAC39C6F2A140F7400B47B3A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AAC39C712A14103500B47B3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AAC39C7C2A1411A500B47B3A /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
-		AAC39C7E2A1411AD00B47B3A /* MakeTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTeamsViewController.swift; sourceTree = "<group>"; };
 		AAC39C802A1411BE00B47B3A /* SelectWordPackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWordPackViewController.swift; sourceTree = "<group>"; };
 		AAC39C822A1411C700B47B3A /* GameSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
 		AAC39C842A1411CF00B47B3A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -56,13 +76,34 @@
 		AAC39C952A141CE700B47B3A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		AAC39C972A141D9900B47B3A /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		AAC39C982A141D9900B47B3A /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
-		AAC39C992A141D9900B47B3A /* TTCommons-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Medium.ttf"; sourceTree = "<group>"; };
 		AAC39C9A2A141D9900B47B3A /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
 		AAC39C9B2A141D9900B47B3A /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
-		AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Light.ttf"; sourceTree = "<group>"; };
 		AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons Pro Expanded Black.ttf"; sourceTree = "<group>"; };
 		AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		AAC39CA92A14240C00B47B3A /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		AAC39CAB2A155B2D00B47B3A /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		AAC39CAD2A155CDA00B47B3A /* MakeTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTeamsViewController.swift; sourceTree = "<group>"; };
+		AAC39CAF2A15602D00B47B3A /* TitleWithImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithImageTableViewCell.swift; sourceTree = "<group>"; };
+		AAC39CB12A15647100B47B3A /* TTCommons-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-LightItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CB22A15647100B47B3A /* TTCommons-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CB32A15647100B47B3A /* TTCommons-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Regular.ttf"; sourceTree = "<group>"; };
+		AAC39CB42A15647100B47B3A /* TTCommons-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TTCommons-Light.ttf"; path = "../../../../../../../Downloads/font (2)/TTCommons-Light.ttf"; sourceTree = "<group>"; };
+		AAC39CB52A15647200B47B3A /* TTCommons-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Bold.ttf"; sourceTree = "<group>"; };
+		AAC39CB62A15647200B47B3A /* TTCommons-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Black.ttf"; sourceTree = "<group>"; };
+		AAC39CB72A15647200B47B3A /* TTCommons-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AAC39CB82A15647200B47B3A /* TTCommons-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CB92A15647200B47B3A /* TTCommons-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CBA2A15647200B47B3A /* TTCommons-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-DemiBold.ttf"; sourceTree = "<group>"; };
+		AAC39CBB2A15647200B47B3A /* TTCommons-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Italic.ttf"; sourceTree = "<group>"; };
+		AAC39CBC2A15647200B47B3A /* TTCommons-DemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-DemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CBD2A15647200B47B3A /* TTCommons-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-MediumItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CBE2A15647200B47B3A /* TTCommons-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Thin.ttf"; sourceTree = "<group>"; };
+		AAC39CBF2A15647200B47B3A /* TTCommons-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-ExtraLight.ttf"; sourceTree = "<group>"; };
+		AAC39CC02A15647200B47B3A /* TTCommons-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CC12A15647200B47B3A /* TTCommons-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		AAC39CC22A15647200B47B3A /* TTCommons-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TTCommons-Medium.ttf"; path = "../../../../../../../Downloads/font (2)/TTCommons-Medium.ttf"; sourceTree = "<group>"; };
+		AAC39CD52A1568B300B47B3A /* MakeTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTeamViewModel.swift; sourceTree = "<group>"; };
+		AAC39CDB2A156DD400B47B3A /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC39CD92A15699000B47B3A /* LetterAvatarKit in Frameworks */,
 				AAC39C932A1415C600B47B3A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC39C5F2A140EFA00B47B3A /* MainMenuViewController.swift */,
+				AAC39CAB2A155B2D00B47B3A /* MainScreenViewModel.swift */,
 			);
 			path = "Main Menu";
 			sourceTree = "<group>";
@@ -149,7 +192,9 @@
 		AAC39C772A14110A00B47B3A /* Team */ = {
 			isa = PBXGroup;
 			children = (
-				AAC39C7E2A1411AD00B47B3A /* MakeTeamsViewController.swift */,
+				AAC39CDA2A156DC700B47B3A /* Model */,
+				AAC39CAD2A155CDA00B47B3A /* MakeTeamsViewController.swift */,
+				AAC39CD52A1568B300B47B3A /* MakeTeamViewModel.swift */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -208,6 +253,24 @@
 		AAC39C8C2A14147400B47B3A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				AAC39CB62A15647200B47B3A /* TTCommons-Black.ttf */,
+				AAC39CB82A15647200B47B3A /* TTCommons-BlackItalic.ttf */,
+				AAC39CB52A15647200B47B3A /* TTCommons-Bold.ttf */,
+				AAC39CB92A15647200B47B3A /* TTCommons-BoldItalic.ttf */,
+				AAC39CBA2A15647200B47B3A /* TTCommons-DemiBold.ttf */,
+				AAC39CBC2A15647200B47B3A /* TTCommons-DemiBoldItalic.ttf */,
+				AAC39CB72A15647200B47B3A /* TTCommons-ExtraBold.ttf */,
+				AAC39CB22A15647100B47B3A /* TTCommons-ExtraBoldItalic.ttf */,
+				AAC39CBF2A15647200B47B3A /* TTCommons-ExtraLight.ttf */,
+				AAC39CC12A15647200B47B3A /* TTCommons-ExtraLightItalic.ttf */,
+				AAC39CBB2A15647200B47B3A /* TTCommons-Italic.ttf */,
+				AAC39CB42A15647100B47B3A /* TTCommons-Light.ttf */,
+				AAC39CB12A15647100B47B3A /* TTCommons-LightItalic.ttf */,
+				AAC39CC22A15647200B47B3A /* TTCommons-Medium.ttf */,
+				AAC39CBD2A15647200B47B3A /* TTCommons-MediumItalic.ttf */,
+				AAC39CB32A15647100B47B3A /* TTCommons-Regular.ttf */,
+				AAC39CBE2A15647200B47B3A /* TTCommons-Thin.ttf */,
+				AAC39CC02A15647200B47B3A /* TTCommons-ThinItalic.ttf */,
 				AAC39C8D2A14147F00B47B3A /* Monoton-Regular.ttf */,
 				AAC39C9B2A141D9900B47B3A /* Inter-Light.otf */,
 				AAC39C972A141D9900B47B3A /* Inter-Medium.otf */,
@@ -215,8 +278,6 @@
 				AAC39C9E2A141D9900B47B3A /* Inter-SemiBold.ttf */,
 				AAC39C982A141D9900B47B3A /* Inter.ttf */,
 				AAC39C9D2A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf */,
-				AAC39C9C2A141D9900B47B3A /* TTCommons-Light.ttf */,
-				AAC39C992A141D9900B47B3A /* TTCommons-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -226,8 +287,17 @@
 			children = (
 				AAC39C952A141CE700B47B3A /* PrimaryButton.swift */,
 				AAC39CA92A14240C00B47B3A /* LoaderView.swift */,
+				AAC39CAF2A15602D00B47B3A /* TitleWithImageTableViewCell.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		AAC39CDA2A156DC700B47B3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAC39CDB2A156DD400B47B3A /* TeamModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +318,7 @@
 			name = AliasApp;
 			packageProductDependencies = (
 				AAC39C922A1415C600B47B3A /* SnapKit */,
+				AAC39CD82A15699000B47B3A /* LetterAvatarKit */,
 			);
 			productName = AliasApp;
 			productReference = AAC39C582A140EFA00B47B3A /* AliasApp.app */;
@@ -279,6 +350,7 @@
 			mainGroup = AAC39C4F2A140EFA00B47B3A;
 			packageReferences = (
 				AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AAC39CD72A15699000B47B3A /* XCRemoteSwiftPackageReference "LetterAvatarKit" */,
 			);
 			productRefGroup = AAC39C592A140EFA00B47B3A /* Products */;
 			projectDirPath = "";
@@ -294,18 +366,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC39CCB2A15673F00B47B3A /* TTCommons-Black.ttf in Resources */,
+				AAC39CC32A15673F00B47B3A /* TTCommons-DemiBold.ttf in Resources */,
+				AAC39CD12A15673F00B47B3A /* TTCommons-Bold.ttf in Resources */,
+				AAC39CC72A15673F00B47B3A /* TTCommons-MediumItalic.ttf in Resources */,
 				AAC39CA62A141D9900B47B3A /* Inter-SemiBold.ttf in Resources */,
+				AAC39CCE2A15673F00B47B3A /* TTCommons-Regular.ttf in Resources */,
+				AAC39CD32A15673F00B47B3A /* TTCommons-Thin.ttf in Resources */,
+				AAC39CC62A15673F00B47B3A /* TTCommons-Medium.ttf in Resources */,
+				AAC39CD42A15673F00B47B3A /* TTCommons-BoldItalic.ttf in Resources */,
+				AAC39CCC2A15673F00B47B3A /* TTCommons-Italic.ttf in Resources */,
 				AAC39C8E2A14147F00B47B3A /* Monoton-Regular.ttf in Resources */,
 				AAC39CA32A141D9900B47B3A /* Inter-Light.otf in Resources */,
+				AAC39CC42A15673F00B47B3A /* TTCommons-Light.ttf in Resources */,
 				AAC39CA22A141D9900B47B3A /* Inter-Regular.otf in Resources */,
-				AAC39CA12A141D9900B47B3A /* TTCommons-Medium.ttf in Resources */,
+				AAC39CD22A15673F00B47B3A /* TTCommons-ExtraLight.ttf in Resources */,
 				AAC39C872A14125700B47B3A /* Colors.xcassets in Resources */,
 				AAC39CA52A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf in Resources */,
+				AAC39CC92A15673F00B47B3A /* TTCommons-LightItalic.ttf in Resources */,
 				AAC39C682A140EFB00B47B3A /* LaunchScreen.storyboard in Resources */,
 				AAC39CA02A141D9900B47B3A /* Inter.ttf in Resources */,
+				AAC39CCF2A15673F00B47B3A /* TTCommons-BlackItalic.ttf in Resources */,
+				AAC39CC82A15673F00B47B3A /* TTCommons-ExtraBold.ttf in Resources */,
+				AAC39CD02A15673F00B47B3A /* TTCommons-ExtraBoldItalic.ttf in Resources */,
+				AAC39CCA2A15673F00B47B3A /* TTCommons-DemiBoldItalic.ttf in Resources */,
 				AAC39C9F2A141D9900B47B3A /* Inter-Medium.otf in Resources */,
-				AAC39CA42A141D9900B47B3A /* TTCommons-Light.ttf in Resources */,
+				AAC39CC52A15673F00B47B3A /* TTCommons-ExtraLightItalic.ttf in Resources */,
 				AAC39C652A140EFB00B47B3A /* Assets.xcassets in Resources */,
+				AAC39CCD2A15673F00B47B3A /* TTCommons-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,14 +405,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC39C702A140F7400B47B3A /* AppCoordinator.swift in Sources */,
-				AAC39C7F2A1411AD00B47B3A /* MakeTeamsViewController.swift in Sources */,
+				AAC39CDC2A156DD400B47B3A /* TeamModel.swift in Sources */,
+				AAC39CAC2A155B2D00B47B3A /* MainScreenViewModel.swift in Sources */,
 				AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */,
+				AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */,
+				AAC39CAE2A155CDA00B47B3A /* MakeTeamsViewController.swift in Sources */,
 				AAC39CAA2A14240C00B47B3A /* LoaderView.swift in Sources */,
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
 				AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */,
+				AAC39CB02A15602D00B47B3A /* TitleWithImageTableViewCell.swift in Sources */,
 				AAC39C5C2A140EFA00B47B3A /* AppDelegate.swift in Sources */,
 				AAC39C722A14103500B47B3A /* SceneDelegate.swift in Sources */,
 				AAC39C812A1411BE00B47B3A /* SelectWordPackViewController.swift in Sources */,
@@ -550,6 +642,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		AAC39CD72A15699000B47B3A /* XCRemoteSwiftPackageReference "LetterAvatarKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vpeschenkov/LetterAvatarKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -557,6 +657,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		AAC39CD82A15699000B47B3A /* LetterAvatarKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAC39CD72A15699000B47B3A /* XCRemoteSwiftPackageReference "LetterAvatarKit" */;
+			productName = LetterAvatarKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

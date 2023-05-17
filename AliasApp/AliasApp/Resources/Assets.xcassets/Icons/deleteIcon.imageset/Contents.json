@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "businessDeleteIcon.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
