@@ -41,7 +41,9 @@ final class MakeTeamViewModel {
     }
     
     func deleteTeam(at index: Int, completion: () -> Void) {
-        teams.remove(at: index)
+        if teams.count > 2 {
+            teams.remove(at: index)
+        }
         completion()
     }
 }
