@@ -54,6 +54,13 @@
 		AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CD52A1568B300B47B3A /* MakeTeamViewModel.swift */; };
 		AAC39CD92A15699000B47B3A /* LetterAvatarKit in Frameworks */ = {isa = PBXBuildFile; productRef = AAC39CD82A15699000B47B3A /* LetterAvatarKit */; };
 		AAC39CDC2A156DD400B47B3A /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CDB2A156DD400B47B3A /* TeamModel.swift */; };
+		AAC39CE72A168A6200B47B3A /* WordpackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CE62A168A6200B47B3A /* WordpackManager.swift */; };
+		AAC39CE92A168B6100B47B3A /* WordpackCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CE82A168B6100B47B3A /* WordpackCities.swift */; };
+		AAC39CEC2A168C4F00B47B3A /* WordpackGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CEB2A168C4F00B47B3A /* WordpackGeneral.swift */; };
+		AAC39CEE2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CED2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift */; };
+		AAC39CF02A1691C200B47B3A /* WordpackClothers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CEF2A1691C200B47B3A /* WordpackClothers.swift */; };
+		AAC39CF22A16957900B47B3A /* SelectWordPackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CF12A16957900B47B3A /* SelectWordPackViewModel.swift */; };
+		AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CF32A169EDD00B47B3A /* GameSettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +111,13 @@
 		AAC39CC22A15647200B47B3A /* TTCommons-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TTCommons-Medium.ttf"; path = "../../../../../../../Downloads/font (2)/TTCommons-Medium.ttf"; sourceTree = "<group>"; };
 		AAC39CD52A1568B300B47B3A /* MakeTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTeamViewModel.swift; sourceTree = "<group>"; };
 		AAC39CDB2A156DD400B47B3A /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		AAC39CE62A168A6200B47B3A /* WordpackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordpackManager.swift; sourceTree = "<group>"; };
+		AAC39CE82A168B6100B47B3A /* WordpackCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordpackCities.swift; sourceTree = "<group>"; };
+		AAC39CEB2A168C4F00B47B3A /* WordpackGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordpackGeneral.swift; sourceTree = "<group>"; };
+		AAC39CED2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithTitleTableViewCell.swift; sourceTree = "<group>"; };
+		AAC39CEF2A1691C200B47B3A /* WordpackClothers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordpackClothers.swift; sourceTree = "<group>"; };
+		AAC39CF12A16957900B47B3A /* SelectWordPackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWordPackViewModel.swift; sourceTree = "<group>"; };
+		AAC39CF32A169EDD00B47B3A /* GameSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +186,8 @@
 			children = (
 				AAC39C792A14117300B47B3A /* App Settings */,
 				AAC39C762A1410DA00B47B3A /* Main Menu */,
-				AAC39C782A14113A00B47B3A /* Words */,
 				AAC39C772A14110A00B47B3A /* Team */,
+				AAC39C782A14113A00B47B3A /* Words */,
 				AAC39C7A2A14117E00B47B3A /* Game Settings */,
 				AAC39C7B2A14118F00B47B3A /* Game */,
 			);
@@ -203,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				AAC39C802A1411BE00B47B3A /* SelectWordPackViewController.swift */,
+				AAC39CF12A16957900B47B3A /* SelectWordPackViewModel.swift */,
+				AAC39CEA2A168B6500B47B3A /* Packs */,
+				AAC39CE62A168A6200B47B3A /* WordpackManager.swift */,
 			);
 			path = Words;
 			sourceTree = "<group>";
@@ -218,6 +235,7 @@
 		AAC39C7A2A14117E00B47B3A /* Game Settings */ = {
 			isa = PBXGroup;
 			children = (
+				AAC39CF32A169EDD00B47B3A /* GameSettingsViewModel.swift */,
 				AAC39C822A1411C700B47B3A /* GameSettingsViewController.swift */,
 			);
 			path = "Game Settings";
@@ -288,6 +306,7 @@
 				AAC39C952A141CE700B47B3A /* PrimaryButton.swift */,
 				AAC39CA92A14240C00B47B3A /* LoaderView.swift */,
 				AAC39CAF2A15602D00B47B3A /* TitleWithImageTableViewCell.swift */,
+				AAC39CED2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -298,6 +317,16 @@
 				AAC39CDB2A156DD400B47B3A /* TeamModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AAC39CEA2A168B6500B47B3A /* Packs */ = {
+			isa = PBXGroup;
+			children = (
+				AAC39CE82A168B6100B47B3A /* WordpackCities.swift */,
+				AAC39CEB2A168C4F00B47B3A /* WordpackGeneral.swift */,
+				AAC39CEF2A1691C200B47B3A /* WordpackClothers.swift */,
+			);
+			path = Packs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,18 +435,25 @@
 			files = (
 				AAC39C702A140F7400B47B3A /* AppCoordinator.swift in Sources */,
 				AAC39CDC2A156DD400B47B3A /* TeamModel.swift in Sources */,
+				AAC39CE72A168A6200B47B3A /* WordpackManager.swift in Sources */,
 				AAC39CAC2A155B2D00B47B3A /* MainScreenViewModel.swift in Sources */,
 				AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */,
 				AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */,
 				AAC39CAE2A155CDA00B47B3A /* MakeTeamsViewController.swift in Sources */,
 				AAC39CAA2A14240C00B47B3A /* LoaderView.swift in Sources */,
+				AAC39CEE2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift in Sources */,
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
+				AAC39CEC2A168C4F00B47B3A /* WordpackGeneral.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
+				AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
 				AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */,
+				AAC39CE92A168B6100B47B3A /* WordpackCities.swift in Sources */,
+				AAC39CF02A1691C200B47B3A /* WordpackClothers.swift in Sources */,
 				AAC39CB02A15602D00B47B3A /* TitleWithImageTableViewCell.swift in Sources */,
 				AAC39C5C2A140EFA00B47B3A /* AppDelegate.swift in Sources */,
+				AAC39CF22A16957900B47B3A /* SelectWordPackViewModel.swift in Sources */,
 				AAC39C722A14103500B47B3A /* SceneDelegate.swift in Sources */,
 				AAC39C812A1411BE00B47B3A /* SelectWordPackViewController.swift in Sources */,
 				AAC39C8A2A14135100B47B3A /* UIColor.swift in Sources */,

@@ -39,6 +39,7 @@ class MakeTeamsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationController()
         setupView()
     }
     
@@ -75,6 +76,8 @@ class MakeTeamsViewController: UIViewController {
             make.height.equalTo(50)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+        continueButton.addTarget(self, action: #selector(goNextStep), for: .touchUpInside)
+        
     }
     
     @objc
@@ -82,6 +85,17 @@ class MakeTeamsViewController: UIViewController {
         viewModel.addTeam {
             tableView.reloadData()
         }
+    }
+    
+    @objc
+    private func goNextStep() {
+        let wordPackVC = SelectWordPackViewController(withViewModel: SelectWordPackViewModel())
+        self.navigationController?.pushViewController(wordPackVC, animated: true)
+    }
+    
+    private func setupNavigationController() {
+        self.navigationController?.navigationBar.tintColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 
@@ -116,17 +130,21 @@ extension MakeTeamsViewController: UITableViewDelegate, UITableViewDataSource {
         let footerView = UIView()
         
         let label = UILabel()
-        label.text = "Максимальное количество команд -- 8"
-        label.textColor = .white
+        label.text = "   Максимальное количество команд -- 8"
+        label.textColor = .generalBlack
+        label.backgroundColor = .white
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 5
         label.font = .TTCommonsBlack(size: 12)
         
         footerView.addSubview(label)
         
         label.snp.makeConstraints { make in
             make.top.equalTo(footerView.snp.top).inset(8)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(30)
         }
 
         return footerView
     }
-    
 }
