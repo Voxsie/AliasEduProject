@@ -7,4 +7,6 @@
 
 import Foundation
 
-f
+final class GameSettingsViewModel {
+    
+}

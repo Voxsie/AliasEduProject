@@ -9,6 +9,8 @@ import UIKit
 
 class GameSettingsViewController: UIViewController {
     
+    var viewModel: GameSettingsViewModel!
+    
     private lazy var titleView: UILabel = {
         let label = UILabel()
         label.text = "Настройки игры"
@@ -25,13 +27,6 @@ class GameSettingsViewController: UIViewController {
         return tv
     }()
     
-    private lazy var addButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("", for: .normal)
-        button.setImage(UIImage(named: "addIcon"), for: .normal)
-        return button
-    }()
-    
     private lazy var continueButton = PrimaryButton(with: "Далее", type: .purple, image: "", animated: false)
     
     override func viewDidLoad() {
@@ -41,7 +36,7 @@ class GameSettingsViewController: UIViewController {
         setupView()
     }
     
-    init(withViewModel viewModel: MakeTeamViewModel) {
+    init(withViewModel viewModel: GameSettingsViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
     }
@@ -56,8 +51,6 @@ class GameSettingsViewController: UIViewController {
         view.backgroundColor = .generalYellow
         
         navigationItem.titleView = titleView
-        addButton.addTarget(self, action: #selector(addTeam), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addButton)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -79,16 +72,8 @@ class GameSettingsViewController: UIViewController {
     }
     
     @objc
-    private func addTeam() {
-        viewModel.addTeam {
-            tableView.reloadData()
-        }
-    }
-    
-    @objc
     private func goNextStep() {
-        let wordPackVC = SelectWordPackViewController(withViewModel: SelectWordPackViewModel())
-        self.navigationController?.pushViewController(wordPackVC, animated: true)
+        
     }
     
     private func setupNavigationController() {
@@ -97,52 +82,17 @@ class GameSettingsViewController: UIViewController {
     }
 }
 
-extension MakeTeamsViewController: UITableViewDelegate, UITableViewDataSource {
+extension GameSettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.teams.count
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithImageTableViewCell.reuseID, for: indexPath) as? TitleWithImageTableViewCell
         else { fatalError() }
-        cell.configure(image: nil, title: viewModel.teams[indexPath.row].name, letterKit: true)
+        cell.configure(image: nil, title: "\(indexPath.row)", letterKit: false)
         cell.selectionStyle = .none
         return cell
-    }
-    
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .normal, title: "", handler: {a,b,c in
-            self.viewModel.deleteTeam(at: indexPath.row) {
-                tableView.reloadData()
-            }
-        })
-        
-        deleteAction.backgroundColor = .red
-        deleteAction.image = UIImage(named: "deleteIcon")
-        return UISwipeActionsConfiguration(actions: [deleteAction])
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView()
-        
-        let label = UILabel()
-        label.text = "   Максимальное количество команд -- 8"
-        label.textColor = .generalBlack
-        label.backgroundColor = .white
-        label.layer.masksToBounds = true
-        label.layer.cornerRadius = 5
-        label.font = .TTCommonsBlack(size: 12)
-        
-        footerView.addSubview(label)
-        
-        label.snp.makeConstraints { make in
-            make.top.equalTo(footerView.snp.top).inset(8)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(30)
-        }
-
-        return footerView
     }
 }

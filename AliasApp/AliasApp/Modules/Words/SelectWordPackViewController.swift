@@ -90,4 +90,9 @@ extension SelectWordPackViewController: UITableViewDelegate, UITableViewDataSour
         cell.backgroundColor = .clear
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gameSettingsVC = GameSettingsViewController(withViewModel: GameSettingsViewModel())
+        self.navigationController?.pushViewController(gameSettingsVC, animated: true)
+    }
 }
