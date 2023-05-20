@@ -61,6 +61,10 @@
 		AAC39CFE2A16A40E00B47B3A /* WordpackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39CFD2A16A40E00B47B3A /* WordpackManager.swift */; };
 		AACE5D5F2A194DBE00C30E0E /* TTCommons-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AACE5D5D2A194DBE00C30E0E /* TTCommons-Light.ttf */; };
 		AACE5D602A194DBE00C30E0E /* TTCommons-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AACE5D5E2A194DBE00C30E0E /* TTCommons-Medium.ttf */; };
+		AACE5D632A1950D900C30E0E /* TitleWithSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D622A1950D900C30E0E /* TitleWithSwitchTableViewCell.swift */; };
+		AACE5D652A1958B500C30E0E /* TitleWithStepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D642A1958B500C30E0E /* TitleWithStepperTableViewCell.swift */; };
+		AACE5D682A19678400C30E0E /* TeamListVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D672A19678400C30E0E /* TeamListVewController.swift */; };
+		AACE5D6A2A1967EB00C30E0E /* TeamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D692A1967EB00C30E0E /* TeamListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +122,10 @@
 		AAC39CFD2A16A40E00B47B3A /* WordpackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordpackManager.swift; sourceTree = "<group>"; };
 		AACE5D5D2A194DBE00C30E0E /* TTCommons-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Light.ttf"; sourceTree = "<group>"; };
 		AACE5D5E2A194DBE00C30E0E /* TTCommons-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-Medium.ttf"; sourceTree = "<group>"; };
+		AACE5D622A1950D900C30E0E /* TitleWithSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		AACE5D642A1958B500C30E0E /* TitleWithStepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithStepperTableViewCell.swift; sourceTree = "<group>"; };
+		AACE5D672A19678400C30E0E /* TeamListVewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListVewController.swift; sourceTree = "<group>"; };
+		AACE5D692A1967EB00C30E0E /* TeamListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,7 @@
 				AAC39C772A14110A00B47B3A /* Team */,
 				AAC39C782A14113A00B47B3A /* Words */,
 				AAC39C7A2A14117E00B47B3A /* Game Settings */,
+				AACE5D662A19676F00C30E0E /* Team List */,
 				AAC39C7B2A14118F00B47B3A /* Game */,
 			);
 			path = Modules;
@@ -304,9 +313,11 @@
 			isa = PBXGroup;
 			children = (
 				AAC39C952A141CE700B47B3A /* PrimaryButton.swift */,
+				AACE5D622A1950D900C30E0E /* TitleWithSwitchTableViewCell.swift */,
 				AAC39CAF2A15602D00B47B3A /* TitleWithImageTableViewCell.swift */,
 				AAC39CED2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift */,
 				AAC39CF92A16A32700B47B3A /* LoaderView.swift */,
+				AACE5D642A1958B500C30E0E /* TitleWithStepperTableViewCell.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -327,6 +338,15 @@
 				AAC39CFB2A16A35600B47B3A /* WordpackCities.swift */,
 			);
 			path = Packs;
+			sourceTree = "<group>";
+		};
+		AACE5D662A19676F00C30E0E /* Team List */ = {
+			isa = PBXGroup;
+			children = (
+				AACE5D672A19678400C30E0E /* TeamListVewController.swift */,
+				AACE5D692A1967EB00C30E0E /* TeamListViewModel.swift */,
+			);
+			path = "Team List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +458,7 @@
 				AAC39CAC2A155B2D00B47B3A /* MainScreenViewModel.swift in Sources */,
 				AAC39CFA2A16A32700B47B3A /* LoaderView.swift in Sources */,
 				AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */,
+				AACE5D632A1950D900C30E0E /* TitleWithSwitchTableViewCell.swift in Sources */,
 				AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */,
 				AAC39CAE2A155CDA00B47B3A /* MakeTeamsViewController.swift in Sources */,
 				AAC39CEE2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift in Sources */,
@@ -448,6 +469,7 @@
 				AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
 				AAC39CFE2A16A40E00B47B3A /* WordpackManager.swift in Sources */,
+				AACE5D652A1958B500C30E0E /* TitleWithStepperTableViewCell.swift in Sources */,
 				AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */,
 				AAC39CF02A1691C200B47B3A /* WordpackClothers.swift in Sources */,
 				AAC39CB02A15602D00B47B3A /* TitleWithImageTableViewCell.swift in Sources */,
@@ -455,6 +477,8 @@
 				AAC39CFC2A16A35600B47B3A /* WordpackCities.swift in Sources */,
 				AAC39CF22A16957900B47B3A /* SelectWordPackViewModel.swift in Sources */,
 				AAC39C722A14103500B47B3A /* SceneDelegate.swift in Sources */,
+				AACE5D682A19678400C30E0E /* TeamListVewController.swift in Sources */,
+				AACE5D6A2A1967EB00C30E0E /* TeamListViewModel.swift in Sources */,
 				AAC39C812A1411BE00B47B3A /* SelectWordPackViewController.swift in Sources */,
 				AAC39C8A2A14135100B47B3A /* UIColor.swift in Sources */,
 			);

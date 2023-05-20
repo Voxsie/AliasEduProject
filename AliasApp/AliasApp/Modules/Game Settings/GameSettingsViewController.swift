@@ -23,7 +23,8 @@ class GameSettingsViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.register(TitleWithImageTableViewCell.self, forCellReuseIdentifier: TitleWithImageTableViewCell.reuseID)
+        tv.register(TitleWithSwitchTableViewCell.self, forCellReuseIdentifier: TitleWithSwitchTableViewCell.reuseID)
+        tv.register(TitleWithStepperTableViewCell.self, forCellReuseIdentifier: TitleWithStepperTableViewCell.reuseID)
         return tv
     }()
     
@@ -73,7 +74,8 @@ class GameSettingsViewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        
+        let vc = TeamListVewController(withViewModel: TeamListViewModel())
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setupNavigationController() {
@@ -89,10 +91,29 @@ extension GameSettingsViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithImageTableViewCell.reuseID, for: indexPath) as? TitleWithImageTableViewCell
-        else { fatalError() }
-        cell.configure(image: nil, title: "\(indexPath.row)", letterKit: false)
-        cell.selectionStyle = .none
-        return cell
+        switch(indexPath.row) {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
+            else { fatalError() }
+            cell.configure(indexPathRow: indexPath.row, title: "Длительность раунда", minValue: 30, maxValue: 90, currentValue: 60)
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
+            else { fatalError() }
+            cell.configure(indexPathRow: indexPath.row, title: "Очков для победы", minValue: 30, maxValue: 150, currentValue: 50)
+            cell.selectionStyle = .none
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSwitchTableViewCell.reuseID, for: indexPath) as? TitleWithSwitchTableViewCell
+            else { fatalError() }
+            cell.configure(indexPathRow: indexPath.row, title: "Уменьшать за неотгаданное", switchState: false)
+            cell.selectionStyle = .none
+            return cell
+        default:
+            let cell = UITableViewCell()
+            cell.selectionStyle = .none
+            cell.separatorInset = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.width, bottom: 0, right: 0)
+            return cell
+        }
     }
 }

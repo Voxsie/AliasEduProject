@@ -22,7 +22,15 @@ class TitleWithImageTableViewCell: UITableViewCell {
     fileprivate lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .inter(type: .regular, size: 16)
+        label.font = .TTCommons(type: .regular, size: 16)
+        return label
+    }()
+    
+    fileprivate lazy var subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .TTCommons(type: .demiBold, size: 16)
+        label.textAlignment = .right
         return label
     }()
     
@@ -49,12 +57,19 @@ class TitleWithImageTableViewCell: UITableViewCell {
         titleLabel.snp.makeConstraints { make in
             make.height.equalTo(24)
             make.left.equalTo(mainImageView.snp.right).offset(12)
-            make.right.equalToSuperview().offset(-8)
+            make.right.equalToSuperview().offset(-100)
             make.centerY.equalTo(mainImageView.snp.centerY)
         }
+        contentView.addSubview(subtitleLabel)
+        subtitleLabel.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-16)
+            make.centerY.equalTo(titleLabel.snp.centerY)
+            make.width.equalTo(84)
+        }
+        
     }
     
-    func configure(image: UIImage?, title: String, letterKit: Bool = false) {
+    func configure(image: UIImage?, title: String, subtitle: String? = nil, letterKit: Bool = false) {
         
         if letterKit {
             let config = LetterAvatarBuilderConfiguration()
@@ -69,5 +84,12 @@ class TitleWithImageTableViewCell: UITableViewCell {
         }
         
         titleLabel.text = title
+        
+        if subtitle != nil {
+            subtitleLabel.text = subtitle
+            subtitleLabel.isHidden = false
+        } else {
+            subtitleLabel.isHidden = false
+        }
     }
 }

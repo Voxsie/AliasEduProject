@@ -11,4 +11,5 @@ import UIKit
 struct Team {
     var id: UUID
     var name: String
+    var score: Double
 }

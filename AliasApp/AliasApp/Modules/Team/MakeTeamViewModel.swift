@@ -26,7 +26,7 @@ final class MakeTeamViewModel {
         }
         let rand = dictionary.randomElement() ?? "Без названия"
         if !usingNames.contains(rand) {
-            return Team(id: UUID(), name: rand)
+            return Team(id: UUID(), name: rand, score: 0)
         } else {
             return generateTeam()
         }
