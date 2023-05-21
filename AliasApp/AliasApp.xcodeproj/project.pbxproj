@@ -66,6 +66,7 @@
 		AACE5D682A19678400C30E0E /* TeamListVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D672A19678400C30E0E /* TeamListVewController.swift */; };
 		AACE5D6A2A1967EB00C30E0E /* TeamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D692A1967EB00C30E0E /* TeamListViewModel.swift */; };
 		AACE5D6C2A1A2E4700C30E0E /* AppSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D6B2A1A2E4700C30E0E /* AppSettingsViewModel.swift */; };
+		AACE5D6E2A1A432A00C30E0E /* TitleWithSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D6D2A1A432A00C30E0E /* TitleWithSegmentControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,7 @@
 		AACE5D672A19678400C30E0E /* TeamListVewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListVewController.swift; sourceTree = "<group>"; };
 		AACE5D692A1967EB00C30E0E /* TeamListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewModel.swift; sourceTree = "<group>"; };
 		AACE5D6B2A1A2E4700C30E0E /* AppSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewModel.swift; sourceTree = "<group>"; };
+		AACE5D6D2A1A432A00C30E0E /* TitleWithSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithSegmentControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 				AAC39CED2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift */,
 				AAC39CF92A16A32700B47B3A /* LoaderView.swift */,
 				AACE5D642A1958B500C30E0E /* TitleWithStepperTableViewCell.swift */,
+				AACE5D6D2A1A432A00C30E0E /* TitleWithSegmentControl.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
 				AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
+				AACE5D6E2A1A432A00C30E0E /* TitleWithSegmentControl.swift in Sources */,
 				AAC39CFE2A16A40E00B47B3A /* WordpackManager.swift in Sources */,
 				AACE5D652A1958B500C30E0E /* TitleWithStepperTableViewCell.swift in Sources */,
 				AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */,

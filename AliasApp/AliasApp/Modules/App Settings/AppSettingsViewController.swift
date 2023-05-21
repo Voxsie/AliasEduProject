@@ -24,7 +24,7 @@ class AppSettingsViewController: UIViewController {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.register(TitleWithSwitchTableViewCell.self, forCellReuseIdentifier: TitleWithSwitchTableViewCell.reuseID)
-        tv.register(TitleWithStepperTableViewCell.self, forCellReuseIdentifier: TitleWithStepperTableViewCell.reuseID)
+        tv.register(TitleWithSegmentControlTableViewCell.self, forCellReuseIdentifier: TitleWithSegmentControlTableViewCell.reuseID)
         return tv
     }()
     
@@ -92,21 +92,9 @@ extension AppSettingsViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch(indexPath.row) {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
-            else { fatalError() }
-            cell.configure(indexPathRow: indexPath.row, title: "Длительность раунда", minValue: 30, maxValue: 90, currentValue: 60)
-            return cell
-        case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
-            else { fatalError() }
-            cell.configure(indexPathRow: indexPath.row, title: "Очков для победы", minValue: 30, maxValue: 150, currentValue: 50)
-            cell.selectionStyle = .none
-            return cell
-        case 2:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSwitchTableViewCell.reuseID, for: indexPath) as? TitleWithSwitchTableViewCell
-            else { fatalError() }
-            cell.configure(indexPathRow: indexPath.row, title: "Уменьшать за неотгаданное", switchState: false)
-            cell.selectionStyle = .none
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSegmentControlTableViewCell.reuseID) as? TitleWithSegmentControlTableViewCell
+            else { return UITableViewCell() }
+            cell.configure(indexPathRow: indexPath.row, title: "Язык", states: ["Русский", "Английский"])
             return cell
         default:
             let cell = UITableViewCell()

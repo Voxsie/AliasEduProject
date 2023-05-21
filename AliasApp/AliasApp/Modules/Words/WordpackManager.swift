@@ -17,6 +17,7 @@ struct WordPack {
     var title: String
     var logo: UIImage
     var words: [Word]
+    var isUnlocked: Bool = false
 }
 
 final class WordPackManager {
@@ -27,13 +28,20 @@ final class WordPackManager {
         return [
             WordPack(title: "Общие",
                      logo: UIImage(named: "generalWordPack") ?? UIImage(),
-                     words: getGeneralWords()),
+                     words: getGeneralWords(),
+                     isUnlocked: true),
             WordPack(title: "Города",
                      logo: UIImage(named: "citiesWordPack") ?? UIImage(),
-                     words: getCitiesWords()),
+                     words: getCitiesWords(),
+                     isUnlocked: true),
             WordPack(title: "Одежда",
                      logo: UIImage(named: "clothesWordPack") ?? UIImage(),
-                     words: getClothesWords())
+                     words: getClothesWords(),
+                     isUnlocked: true),
+            WordPack(title: "Кино",
+                     logo: UIImage(named: "movieWordPack") ?? UIImage(),
+                     words: getClothesWords(),
+                     isUnlocked: false)
         ]
     }
 }

@@ -120,6 +120,8 @@ class MainMenuViewController: UIViewController {
         settingsButton.snp.makeConstraints { make in
             make.height.width.equalTo(50)
         }
+        settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
+        
         startGameButton.snp.makeConstraints { make in
             make.height.equalTo(50)
         }

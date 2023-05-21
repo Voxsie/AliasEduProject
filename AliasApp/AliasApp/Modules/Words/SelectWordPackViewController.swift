@@ -85,15 +85,26 @@ extension SelectWordPackViewController: UITableViewDelegate, UITableViewDataSour
         let wordPack = WordPackManager.shared.getListOfPacks()[indexPath.section]
         cell.configure(
             image: wordPack.logo,
-            title: " \(wordPack.title) ")
+            title: " \(wordPack.title) ",
+            isUnlocked: wordPack.isUnlocked)
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vm = GameSettingsViewModel()
-        let gameSettingsVC = GameSettingsViewController(withViewModel: vm)
-        self.navigationController?.pushViewController(gameSettingsVC, animated: true)
+        let wordPack = WordPackManager.shared.getListOfPacks()[indexPath.section]
+        if wordPack.isUnlocked {
+            let vm = GameSettingsViewModel()
+            let gameSettingsVC = GameSettingsViewController(withViewModel: vm)
+            self.navigationController?.pushViewController(gameSettingsVC, animated: true)
+        } else {
+            let buyAction = UIAlertAction(title: "Купить", style: .default)
+            let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
+            let alert = UIAlertController(title: "Покупка набора '\(wordPack.title)'", message: "Вы действительно хотите перейти к покупке набора?", preferredStyle: .alert)
+            alert.addAction(buyAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        }
     }
 }
