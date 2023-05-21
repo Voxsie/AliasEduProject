@@ -136,10 +136,18 @@ class MainMenuViewController: UIViewController {
     }
     
     @objc
-    func startGame() {
+    private func startGame() {
+        let vm = MakeTeamViewModel()
+        let vc = MakeTeamsViewController(withViewModel: vm)
 //        AppCoordinator.shared.showTeamScreen()
-        self.navigationController?.pushViewController(MakeTeamsViewController(withViewModel: MakeTeamViewModel()), animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    @objc
+    private func openSettings() {
+        let vm = AppSettingsViewModel()
+        let vc = AppSettingsViewController(withViewModel: vm)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

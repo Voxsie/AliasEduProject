@@ -74,7 +74,8 @@ class GameSettingsViewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        let vc = TeamListVewController(withViewModel: TeamListViewModel())
+        let vm = TeamListViewModel()
+        let vc = TeamListVewController(withViewModel: vm)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -92,7 +92,8 @@ extension SelectWordPackViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let gameSettingsVC = GameSettingsViewController(withViewModel: GameSettingsViewModel())
+        let vm = GameSettingsViewModel()
+        let gameSettingsVC = GameSettingsViewController(withViewModel: vm)
         self.navigationController?.pushViewController(gameSettingsVC, animated: true)
     }
 }

@@ -65,6 +65,7 @@
 		AACE5D652A1958B500C30E0E /* TitleWithStepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D642A1958B500C30E0E /* TitleWithStepperTableViewCell.swift */; };
 		AACE5D682A19678400C30E0E /* TeamListVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D672A19678400C30E0E /* TeamListVewController.swift */; };
 		AACE5D6A2A1967EB00C30E0E /* TeamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D692A1967EB00C30E0E /* TeamListViewModel.swift */; };
+		AACE5D6C2A1A2E4700C30E0E /* AppSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5D6B2A1A2E4700C30E0E /* AppSettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		AACE5D642A1958B500C30E0E /* TitleWithStepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithStepperTableViewCell.swift; sourceTree = "<group>"; };
 		AACE5D672A19678400C30E0E /* TeamListVewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListVewController.swift; sourceTree = "<group>"; };
 		AACE5D692A1967EB00C30E0E /* TeamListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewModel.swift; sourceTree = "<group>"; };
+		AACE5D6B2A1A2E4700C30E0E /* AppSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC39C7C2A1411A500B47B3A /* AppSettingsViewController.swift */,
+				AACE5D6B2A1A2E4700C30E0E /* AppSettingsViewModel.swift */,
 			);
 			path = "App Settings";
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */,
 				AAC39CAE2A155CDA00B47B3A /* MakeTeamsViewController.swift in Sources */,
 				AAC39CEE2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift in Sources */,
+				AACE5D6C2A1A2E4700C30E0E /* AppSettingsViewModel.swift in Sources */,
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
 				AAC39CEC2A168C4F00B47B3A /* WordpackGeneral.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
