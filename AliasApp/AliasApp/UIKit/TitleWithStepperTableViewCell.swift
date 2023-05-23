@@ -7,11 +7,15 @@
 
 import UIKit
 
+protocol StepperDelegate: AnyObject {
+    func didValueChanged(on index: Int, with value: Double)
+}
+
 class TitleWithStepperTableViewCell: UITableViewCell {
 
     static var reuseID = String(describing: TitleWithStepperTableViewCell.self)
     
-    weak var delegate: SwitcherDelegate?
+    weak var delegate: StepperDelegate?
 
     var index: Int = 0
     
@@ -72,7 +76,7 @@ class TitleWithStepperTableViewCell: UITableViewCell {
     @objc
     private func switcherValueChanged() {
         subtitleLabel.text = "\(stepper.value)"
-//        delegate?.didValueChanged(with: index, value: mainSwitch.isOn)
+        delegate?.didValueChanged(on: index, with: stepper.value)
     }
     
     func configure(indexPathRow: Int, title: String, minValue: Double, maxValue: Double, currentValue: Double) {

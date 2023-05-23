@@ -74,7 +74,7 @@ class GameSettingsViewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        let vm = TeamListViewModel()
+        let vm = TeamListViewModel(teams: viewModel.teams, wordPack: viewModel.wordPack, gameSettings: viewModel.model)
         let vc = TeamListVewController(withViewModel: vm)
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -96,12 +96,12 @@ extension GameSettingsViewController: UITableViewDelegate, UITableViewDataSource
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
             else { fatalError() }
-            cell.configure(indexPathRow: indexPath.row, title: "Длительность раунда", minValue: 30, maxValue: 90, currentValue: 60)
+            cell.configure(indexPathRow: indexPath.row, title: "Длительность раунда", minValue: 30, maxValue: 90, currentValue: viewModel.model.timePerRound)
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
             else { fatalError() }
-            cell.configure(indexPathRow: indexPath.row, title: "Очков для победы", minValue: 30, maxValue: 150, currentValue: 50)
+            cell.configure(indexPathRow: indexPath.row, title: "Очков для победы", minValue: 30, maxValue: 150, currentValue: viewModel.model.pointsToWin)
             cell.selectionStyle = .none
             return cell
         case 2:

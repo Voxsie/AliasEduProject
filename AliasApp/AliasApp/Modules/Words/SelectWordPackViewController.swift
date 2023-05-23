@@ -95,7 +95,7 @@ extension SelectWordPackViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let wordPack = WordPackManager.shared.getListOfPacks()[indexPath.section]
         if wordPack.isUnlocked {
-            let vm = GameSettingsViewModel()
+            let vm = GameSettingsViewModel(teams: viewModel.teams, wordPack: wordPack)
             let gameSettingsVC = GameSettingsViewController(withViewModel: vm)
             self.navigationController?.pushViewController(gameSettingsVC, animated: true)
         } else {

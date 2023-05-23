@@ -9,4 +9,9 @@ import Foundation
 
 final class SelectWordPackViewModel {
     
+    var teams: [Team]
+    
+    init(teams: [Team]) {
+        self.teams = teams
+    }
 }

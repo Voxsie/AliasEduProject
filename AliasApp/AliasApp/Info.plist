@@ -5,31 +5,31 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Monoton-Regular.ttf</string>
-        <string>Inter-SemiBold.ttf</string>
-        <string>TT Commons Pro Expanded Black.ttf</string>
-        <string>TTCommons-Light.ttf</string>
-        <string>TTCommons-Medium.ttf</string>
-        <string>TTCommons-Black.ttf</string>
-        <string>TTCommons-BlackItalic.ttf</string>
-        <string>TTCommons-Bold.ttf</string>
-        <string>TTCommons-BoldItalic.ttf</string>
-        <string>TTCommons-DemiBold.ttf</string>
-        <string>TTCommons-DemiBoldItalic.ttf</string>
-        <string>TTCommons-ExtraBold.ttf</string>
-        <string>TTCommons-ExtraBoldItalic.ttf</string>
-        <string>TTCommons-ExtraLight.ttf</string>
-        <string>TTCommons-ExtraLightItalic.ttf</string>
-        <string>TTCommons-Italic.ttf</string>
-        <string>TTCommons-Light.ttf</string>
-        <string>TTCommons-LightItalic.ttf</string>
-        <string>TTCommons-MediumItalic.ttf</string>
-        <string>TTCommons-Regular.ttf</string>
-        <string>TTCommons-Thin.ttf</string>
-        <string>TTCommons-ThinItalic.ttf</string>
-        <string>Inter-Light.otf</string>
-        <string>Inter-Medium.otf</string>
-        <string>Inter-Regular.otf</string>
-        <string>Inter.ttf</string>
+		<string>Inter-SemiBold.ttf</string>
+		<string>TT Commons Pro Expanded Black.ttf</string>
+		<string>TTCommons-Light.ttf</string>
+		<string>TTCommons-Medium.ttf</string>
+		<string>TTCommons-Black.ttf</string>
+		<string>TTCommons-BlackItalic.ttf</string>
+		<string>TTCommons-Bold.ttf</string>
+		<string>TTCommons-BoldItalic.ttf</string>
+		<string>TTCommons-DemiBold.ttf</string>
+		<string>TTCommons-DemiBoldItalic.ttf</string>
+		<string>TTCommons-ExtraBold.ttf</string>
+		<string>TTCommons-ExtraBoldItalic.ttf</string>
+		<string>TTCommons-ExtraLight.ttf</string>
+		<string>TTCommons-ExtraLightItalic.ttf</string>
+		<string>TTCommons-Italic.ttf</string>
+		<string>TTCommons-Light.ttf</string>
+		<string>TTCommons-LightItalic.ttf</string>
+		<string>TTCommons-MediumItalic.ttf</string>
+		<string>TTCommons-Regular.ttf</string>
+		<string>TTCommons-Thin.ttf</string>
+		<string>TTCommons-ThinItalic.ttf</string>
+		<string>Inter-Light.otf</string>
+		<string>Inter-Medium.otf</string>
+		<string>Inter-Regular.otf</string>
+		<string>Inter.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -9,6 +9,15 @@ import Foundation
 
 final class TeamListViewModel {
     
-    var teams: [Team] = MakeTeamViewModel().teams
+    var teams: [Team] = []
     
+    var wordPack: WordPack
+    
+    var gameSettings: GameSettingsModel
+    
+    init(teams: [Team], wordPack: WordPack, gameSettings: GameSettingsModel) {
+        self.teams = teams
+        self.wordPack = wordPack
+        self.gameSettings = gameSettings
+    }
 }

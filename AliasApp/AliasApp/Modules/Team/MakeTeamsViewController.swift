@@ -89,7 +89,7 @@ class MakeTeamsViewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        let vm = SelectWordPackViewModel()
+        let vm = SelectWordPackViewModel(teams: viewModel.teams)
         let wordPackVC = SelectWordPackViewController(withViewModel: vm)
         self.navigationController?.pushViewController(wordPackVC, animated: true)
     }
