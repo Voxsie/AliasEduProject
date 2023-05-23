@@ -96,19 +96,26 @@ extension GameSettingsViewController: UITableViewDelegate, UITableViewDataSource
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
             else { fatalError() }
+            cell.index = indexPath.row
             cell.configure(indexPathRow: indexPath.row, title: "Длительность раунда", minValue: 30, maxValue: 90, currentValue: viewModel.model.timePerRound)
+            cell.delegate = self
+            cell.selectionStyle = .none
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
             else { fatalError() }
+            cell.index = indexPath.row
             cell.configure(indexPathRow: indexPath.row, title: "Очков для победы", minValue: 30, maxValue: 150, currentValue: viewModel.model.pointsToWin)
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSwitchTableViewCell.reuseID, for: indexPath) as? TitleWithSwitchTableViewCell
             else { fatalError() }
+            cell.index = indexPath.row
             cell.configure(indexPathRow: indexPath.row, title: "Уменьшать за неотгаданное", switchState: false)
             cell.selectionStyle = .none
+            cell.delegate = self
             return cell
         default:
             let cell = UITableViewCell()
@@ -117,4 +124,21 @@ extension GameSettingsViewController: UITableViewDelegate, UITableViewDataSource
             return cell
         }
     }
+}
+
+extension GameSettingsViewController: StepperDelegate, SwitcherDelegate {
+    
+    func didValueChanged(on index: Int, with value: Double) {
+        switch(index) {
+        case 0: viewModel.model.timePerRound = value
+        case 1: viewModel.model.pointsToWin = value
+        default: break
+        }
+    }
+    
+    func didValueChanged(with index: Int, value: Bool) {
+        viewModel.model.isSubtract = value
+    }
+    
+    
 }
