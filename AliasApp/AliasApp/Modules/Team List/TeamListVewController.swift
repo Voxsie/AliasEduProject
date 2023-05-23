@@ -73,7 +73,7 @@ class TeamListVewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        
+//        self.navigationController?.popToRootViewController(animated: true)
     }
     
     private func setupNavigationController() {
