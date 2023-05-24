@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		397F66172A1E404C00BFE34F /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F66162A1E404C00BFE34F /* SoundManager.swift */; };
+		397F661B2A1E40A600BFE34F /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F661A2A1E40A600BFE34F /* Sound.swift */; };
+		397F66212A1E40D800BFE34F /* victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F661D2A1E40D800BFE34F /* victory.mp3 */; };
+		397F66222A1E40D800BFE34F /* buttonTapping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F661E2A1E40D800BFE34F /* buttonTapping.mp3 */; };
+		397F66232A1E40D800BFE34F /* clockTicking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F661F2A1E40D800BFE34F /* clockTicking.mp3 */; };
+		397F66242A1E40D800BFE34F /* commonWord.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F66202A1E40D800BFE34F /* commonWord.mp3 */; };
 		AA9BA6542A1D55D70051DA3A /* GameSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9BA6532A1D55D70051DA3A /* GameSettingsModel.swift */; };
 		AAC39C5C2A140EFA00B47B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C5B2A140EFA00B47B3A /* AppDelegate.swift */; };
 		AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C5F2A140EFA00B47B3A /* MainMenuViewController.swift */; };
@@ -71,6 +77,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		397F66162A1E404C00BFE34F /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		397F661A2A1E40A600BFE34F /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		397F661D2A1E40D800BFE34F /* victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = victory.mp3; sourceTree = "<group>"; };
+		397F661E2A1E40D800BFE34F /* buttonTapping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonTapping.mp3; sourceTree = "<group>"; };
+		397F661F2A1E40D800BFE34F /* clockTicking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clockTicking.mp3; sourceTree = "<group>"; };
+		397F66202A1E40D800BFE34F /* commonWord.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = commonWord.mp3; sourceTree = "<group>"; };
 		AA9BA6532A1D55D70051DA3A /* GameSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsModel.swift; sourceTree = "<group>"; };
 		AAC39C582A140EFA00B47B3A /* AliasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC39C5B2A140EFA00B47B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +159,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		397F66152A1E404000BFE34F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				397F66162A1E404C00BFE34F /* SoundManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		397F661C2A1E40C000BFE34F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				397F661E2A1E40D800BFE34F /* buttonTapping.mp3 */,
+				397F661F2A1E40D800BFE34F /* clockTicking.mp3 */,
+				397F66202A1E40D800BFE34F /* commonWord.mp3 */,
+				397F661D2A1E40D800BFE34F /* victory.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		AAC39C4F2A140EFA00B47B3A = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +197,7 @@
 		AAC39C5A2A140EFA00B47B3A /* AliasApp */ = {
 			isa = PBXGroup;
 			children = (
+				397F66152A1E404000BFE34F /* Services */,
 				AAC39C752A1410D300B47B3A /* Modules */,
 				AAC39C742A1410C300B47B3A /* Navigation */,
 				AAC39C732A14103E00B47B3A /* AppDelegates */,
@@ -271,6 +303,7 @@
 			children = (
 				AAC39C892A14135100B47B3A /* UIColor.swift */,
 				AAC39C8F2A14148E00B47B3A /* UIFont.swift */,
+				397F661A2A1E40A600BFE34F /* Sound.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +311,7 @@
 		AAC39C8B2A14146100B47B3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				397F661C2A1E40C000BFE34F /* Sounds */,
 				AAC39C8C2A14147400B47B3A /* Fonts */,
 				AAC39C642A140EFB00B47B3A /* Assets.xcassets */,
 				AAC39C862A14125700B47B3A /* Colors.xcassets */,
@@ -439,10 +473,14 @@
 				AAC39CD22A15673F00B47B3A /* TTCommons-ExtraLight.ttf in Resources */,
 				AAC39C872A14125700B47B3A /* Colors.xcassets in Resources */,
 				AAC39CA52A141D9900B47B3A /* TT Commons Pro Expanded Black.ttf in Resources */,
+				397F66232A1E40D800BFE34F /* clockTicking.mp3 in Resources */,
 				AAC39CC92A15673F00B47B3A /* TTCommons-LightItalic.ttf in Resources */,
+				397F66242A1E40D800BFE34F /* commonWord.mp3 in Resources */,
+				397F66222A1E40D800BFE34F /* buttonTapping.mp3 in Resources */,
 				AAC39C682A140EFB00B47B3A /* LaunchScreen.storyboard in Resources */,
 				AAC39CA02A141D9900B47B3A /* Inter.ttf in Resources */,
 				AAC39CCF2A15673F00B47B3A /* TTCommons-BlackItalic.ttf in Resources */,
+				397F66212A1E40D800BFE34F /* victory.mp3 in Resources */,
 				AAC39CC82A15673F00B47B3A /* TTCommons-ExtraBold.ttf in Resources */,
 				AAC39CD02A15673F00B47B3A /* TTCommons-ExtraBoldItalic.ttf in Resources */,
 				AAC39CCA2A15673F00B47B3A /* TTCommons-DemiBoldItalic.ttf in Resources */,
@@ -463,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC39C702A140F7400B47B3A /* AppCoordinator.swift in Sources */,
+				397F661B2A1E40A600BFE34F /* Sound.swift in Sources */,
 				AAC39CDC2A156DD400B47B3A /* TeamModel.swift in Sources */,
 				AAC39CAC2A155B2D00B47B3A /* MainScreenViewModel.swift in Sources */,
 				AAC39CFA2A16A32700B47B3A /* LoaderView.swift in Sources */,
@@ -479,6 +518,7 @@
 				AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
 				AACE5D6E2A1A432A00C30E0E /* TitleWithSegmentControl.swift in Sources */,
+				397F66172A1E404C00BFE34F /* SoundManager.swift in Sources */,
 				AAC39CFE2A16A40E00B47B3A /* WordpackManager.swift in Sources */,
 				AACE5D652A1958B500C30E0E /* TitleWithStepperTableViewCell.swift in Sources */,
 				AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */,
