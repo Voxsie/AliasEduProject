@@ -66,4 +66,10 @@ class SoundManager {
             print("something went wrong")
         }
     }
+    
+    func pause() {
+        if let player = SoundManager.shared.player, player.isPlaying {
+            player.stop()
+        }
+    }
 }
