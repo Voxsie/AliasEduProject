@@ -18,6 +18,10 @@ struct WordPack {
     var logo: UIImage
     var words: [Word]
     var isUnlocked: Bool = false
+    
+    func count() -> Int {
+        return words.count
+    }
 }
 
 final class WordPackManager {

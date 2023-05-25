@@ -1,19 +1,19 @@
 //
-//  TeamListVewController.swift
+//  RoundCountedWordsViewController.swift
 //  AliasApp
 //
-//  Created by Илья Желтиков on 20.05.2023.
+//  Created by Арслан Рашидов on 25.05.2023.
 //
 
 import UIKit
 
-class TeamListVewController: UIViewController {
+class RoundCountedWordsViewController: UIViewController {
     
-    var viewModel: TeamListViewModel!
+    var viewModel: RoundCountedWordsViewModel!
     
     private lazy var titleView: UILabel = {
         let label = UILabel()
-        label.text = "Рейтинг команд"
+        label.text = "Удалить слова"
         label.textColor = .white
         label.textAlignment = .center
         label.font = .TTCommonsBlack(size: 16)
@@ -23,11 +23,11 @@ class TeamListVewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.register(TitleWithImageTableViewCell.self, forCellReuseIdentifier: TitleWithImageTableViewCell.reuseID)
+        tv.register(TitleWithSwitchTableViewCell.self, forCellReuseIdentifier: TitleWithSwitchTableViewCell.reuseID)
         return tv
     }()
     
-    private lazy var continueButton = PrimaryButton(with: "Начать раунд", type: .purple, image: "", animated: false)
+    private lazy var continueButton = PrimaryButton(with: "Продолжить", type: .purple, image: "", animated: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class TeamListVewController: UIViewController {
         setupView()
     }
     
-    init(withViewModel viewModel: TeamListViewModel) {
+    init(withViewModel viewModel: RoundCountedWordsViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
     }
@@ -73,8 +73,8 @@ class TeamListVewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        let vm = RoundCountedWordsViewModel(teams: viewModel.teams, wordPack: viewModel.wordPack)
-        let vc = RoundCountedWordsViewController(withViewModel: vm)
+        let vm = RoundResultsViewModel(teams: viewModel.teams)
+        let vc = RoundResultsViewController(withViewModel: vm)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -84,20 +84,31 @@ class TeamListVewController: UIViewController {
     }
 }
 
-extension TeamListVewController: UITableViewDelegate, UITableViewDataSource {
+extension RoundCountedWordsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.teams.count
+        viewModel.wordPack.count()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithImageTableViewCell.reuseID, for: indexPath) as? TitleWithImageTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSwitchTableViewCell.reuseID, for: indexPath) as? TitleWithSwitchTableViewCell
         else { fatalError() }
-        cell.configure(image: nil,
-                       title: viewModel.teams[indexPath.row].name,
-                       subtitle: "\(viewModel.teams[indexPath.row].score)",
-                       letterKit: true)
+        cell.index = indexPath.row
+        cell.configure(indexPathRow: indexPath.row, title: viewModel.wordPack.words[indexPath.row].russian, switchState: true)
         cell.selectionStyle = .none
+        cell.delegate = self
         return cell
+        
+
     }
+}
+
+extension RoundCountedWordsViewController: SwitcherDelegate {
+    
+    func didValueChanged(with index: Int, value: Bool) {
+        print(index)
+        print(value)
+    }
+    
+    
 }
