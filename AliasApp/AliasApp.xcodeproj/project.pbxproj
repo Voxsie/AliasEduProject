@@ -26,6 +26,9 @@
 		39422DC42A211A5000148DEF /* CHIPageControlPaprika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39422DB82A211A5000148DEF /* CHIPageControlPaprika.swift */; };
 		39422DC52A211A5000148DEF /* CHIPageControlFresno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39422DB92A211A5000148DEF /* CHIPageControlFresno.swift */; };
 		39422DC62A211A5000148DEF /* CHIPageControlAji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39422DBA2A211A5000148DEF /* CHIPageControlAji.swift */; };
+		39422DCB2A212DF400148DEF /* skipWord.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 39422DCA2A212DF400148DEF /* skipWord.mp3 */; };
+		39422DCF2A21338300148DEF /* guessedWord.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 39422DCE2A21338300148DEF /* guessedWord.mp3 */; };
+		39422DD12A21475400148DEF /* roundEnd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 39422DD02A21475400148DEF /* roundEnd.mp3 */; };
 		394C91DC2A20C83F00E8ECCC /* RoundResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91D72A20C83F00E8ECCC /* RoundResultsViewController.swift */; };
 		394C91DD2A20C83F00E8ECCC /* RoundResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91D82A20C83F00E8ECCC /* RoundResultsViewModel.swift */; };
 		394C91DE2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91DA2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift */; };
@@ -122,6 +125,9 @@
 		39422DB82A211A5000148DEF /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlPaprika.swift; sourceTree = "<group>"; };
 		39422DB92A211A5000148DEF /* CHIPageControlFresno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlFresno.swift; sourceTree = "<group>"; };
 		39422DBA2A211A5000148DEF /* CHIPageControlAji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHIPageControlAji.swift; sourceTree = "<group>"; };
+		39422DCA2A212DF400148DEF /* skipWord.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skipWord.mp3; sourceTree = "<group>"; };
+		39422DCE2A21338300148DEF /* guessedWord.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = guessedWord.mp3; sourceTree = "<group>"; };
+		39422DD02A21475400148DEF /* roundEnd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roundEnd.mp3; sourceTree = "<group>"; };
 		394C91D72A20C83F00E8ECCC /* RoundResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundResultsViewController.swift; sourceTree = "<group>"; };
 		394C91D82A20C83F00E8ECCC /* RoundResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundResultsViewModel.swift; sourceTree = "<group>"; };
 		394C91DA2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCountedWordsViewModel.swift; sourceTree = "<group>"; };
@@ -303,6 +309,9 @@
 		397F661C2A1E40C000BFE34F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				39422DD02A21475400148DEF /* roundEnd.mp3 */,
+				39422DCE2A21338300148DEF /* guessedWord.mp3 */,
+				39422DCA2A212DF400148DEF /* skipWord.mp3 */,
 				397F661E2A1E40D800BFE34F /* buttonTapping.mp3 */,
 				397F661F2A1E40D800BFE34F /* clockTicking.mp3 */,
 				397F66202A1E40D800BFE34F /* commonWord.mp3 */,
@@ -656,6 +665,8 @@
 				397F66232A1E40D800BFE34F /* clockTicking.mp3 in Resources */,
 				AAC39CC92A15673F00B47B3A /* TTCommons-LightItalic.ttf in Resources */,
 				397F66242A1E40D800BFE34F /* commonWord.mp3 in Resources */,
+				39422DD12A21475400148DEF /* roundEnd.mp3 in Resources */,
+				39422DCB2A212DF400148DEF /* skipWord.mp3 in Resources */,
 				397F66222A1E40D800BFE34F /* buttonTapping.mp3 in Resources */,
 				AAC39C682A140EFB00B47B3A /* LaunchScreen.storyboard in Resources */,
 				AAC39CA02A141D9900B47B3A /* Inter.ttf in Resources */,
@@ -667,6 +678,7 @@
 				AACE5D602A194DBE00C30E0E /* TTCommons-Medium.ttf in Resources */,
 				AAC39C9F2A141D9900B47B3A /* Inter-Medium.otf in Resources */,
 				AAC39CC52A15673F00B47B3A /* TTCommons-ExtraLightItalic.ttf in Resources */,
+				39422DCF2A21338300148DEF /* guessedWord.mp3 in Resources */,
 				AAC39C652A140EFB00B47B3A /* Assets.xcassets in Resources */,
 				AACE5D5F2A194DBE00C30E0E /* TTCommons-Light.ttf in Resources */,
 				AAC39CCD2A15673F00B47B3A /* TTCommons-ThinItalic.ttf in Resources */,

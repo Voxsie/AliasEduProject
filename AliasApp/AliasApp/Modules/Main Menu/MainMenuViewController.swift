@@ -140,6 +140,7 @@ class MainMenuViewController: UIViewController {
     
     @objc
     private func startGame() {
+        SoundManager.shared.playSound(sound: .buttonTapping)
         let vm = MakeTeamViewModel()
         let vc = MakeTeamsViewController(withViewModel: vm)
 //        AppCoordinator.shared.showTeamScreen()

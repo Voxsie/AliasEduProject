@@ -28,11 +28,11 @@ class SoundManager {
             try AVAudioSession.sharedInstance().setMode(.default)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
             
-            guard let souldURL = soundURL else {
+            guard let soundURL = soundURL else {
                 return
             }
             
-            player = try AVAudioPlayer(contentsOf: URL(filePath: souldURL))
+            player = try AVAudioPlayer(contentsOf: URL(filePath: soundURL))
             
             guard let player = player else {
                 return
@@ -51,11 +51,11 @@ class SoundManager {
             try AVAudioSession.sharedInstance().setMode(.default)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
             
-            guard let souldURL = soundURL else {
+            guard let soundURL = soundURL else {
                 return
             }
             
-            player = try AVAudioPlayer(contentsOf: URL(filePath: souldURL))
+            player = try AVAudioPlayer(contentsOf: URL(filePath: soundURL))
             
             guard let player = player else {
                 return
