@@ -79,12 +79,12 @@ class TitleWithStepperTableViewCell: UITableViewCell {
         delegate?.didValueChanged(on: index, with: stepper.value)
     }
     
-    func configure(indexPathRow: Int, title: String, minValue: Double, maxValue: Double, currentValue: Double) {
+    func configure(indexPathRow: Int, title: String, minValue: Double, maxValue: Double, currentValue: Int) {
         index = indexPathRow
         titleLabel.text = title
         
         stepper.minimumValue = minValue
-        stepper.value = currentValue
+        stepper.value = Double(currentValue)
         stepper.maximumValue = maxValue
         stepper.stepValue = 1
         subtitleLabel.text = "\(stepper.value)"

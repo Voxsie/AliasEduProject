@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A840EAF45682FCA9637B9F6 /* Pods_AliasApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43542493FB8C9A3D9B64B4B2 /* Pods_AliasApp.framework */; };
+		1E665B1A2A20D3C100D0FA14 /* WordsCardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E665B172A20D3C100D0FA14 /* WordsCardContentView.swift */; };
+		1E665B1B2A20D3C100D0FA14 /* SwapCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E665B182A20D3C100D0FA14 /* SwapCardsViewController.swift */; };
+		1E665B1C2A20D3C100D0FA14 /* SwapCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E665B192A20D3C100D0FA14 /* SwapCardsViewModel.swift */; };
+		2BF60BC4AA612649D575DF1D /* Pods_AliasApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4429DE70B66F652807011438 /* Pods_AliasApp.framework */; };
 		394C91DC2A20C83F00E8ECCC /* RoundResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91D72A20C83F00E8ECCC /* RoundResultsViewController.swift */; };
 		394C91DD2A20C83F00E8ECCC /* RoundResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91D82A20C83F00E8ECCC /* RoundResultsViewModel.swift */; };
 		394C91DE2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91DA2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift */; };
@@ -86,6 +89,9 @@
 
 /* Begin PBXFileReference section */
 		05A3C76C1251622C4099DB24 /* Pods-AliasApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliasApp.release.xcconfig"; path = "Target Support Files/Pods-AliasApp/Pods-AliasApp.release.xcconfig"; sourceTree = "<group>"; };
+		1E665B172A20D3C100D0FA14 /* WordsCardContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsCardContentView.swift; sourceTree = "<group>"; };
+		1E665B182A20D3C100D0FA14 /* SwapCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwapCardsViewController.swift; sourceTree = "<group>"; };
+		1E665B192A20D3C100D0FA14 /* SwapCardsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwapCardsViewModel.swift; sourceTree = "<group>"; };
 		394C91D72A20C83F00E8ECCC /* RoundResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundResultsViewController.swift; sourceTree = "<group>"; };
 		394C91D82A20C83F00E8ECCC /* RoundResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundResultsViewModel.swift; sourceTree = "<group>"; };
 		394C91DA2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCountedWordsViewModel.swift; sourceTree = "<group>"; };
@@ -99,7 +105,7 @@
 		397F66292A1E700D00BFE34F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		397F662B2A1E741100BFE34F /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
 		397F66302A1F78BD00BFE34F /* ParagraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphView.swift; sourceTree = "<group>"; };
-		43542493FB8C9A3D9B64B4B2 /* Pods_AliasApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliasApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4429DE70B66F652807011438 /* Pods_AliasApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliasApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9BA6532A1D55D70051DA3A /* GameSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsModel.swift; sourceTree = "<group>"; };
 		AAC39C582A140EFA00B47B3A /* AliasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC39C5B2A140EFA00B47B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,13 +177,31 @@
 			files = (
 				AAC39CD92A15699000B47B3A /* LetterAvatarKit in Frameworks */,
 				AAC39C932A1415C600B47B3A /* SnapKit in Frameworks */,
-				1A840EAF45682FCA9637B9F6 /* Pods_AliasApp.framework in Frameworks */,
+				2BF60BC4AA612649D575DF1D /* Pods_AliasApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E665B152A20D3C100D0FA14 /* SwapCards */ = {
+			isa = PBXGroup;
+			children = (
+				1E665B162A20D3C100D0FA14 /* WordsCardContentView */,
+				1E665B182A20D3C100D0FA14 /* SwapCardsViewController.swift */,
+				1E665B192A20D3C100D0FA14 /* SwapCardsViewModel.swift */,
+			);
+			path = SwapCards;
+			sourceTree = "<group>";
+		};
+		1E665B162A20D3C100D0FA14 /* WordsCardContentView */ = {
+			isa = PBXGroup;
+			children = (
+				1E665B172A20D3C100D0FA14 /* WordsCardContentView.swift */,
+			);
+			path = WordsCardContentView;
+			sourceTree = "<group>";
+		};
 		394C91D62A20C83F00E8ECCC /* Round Results */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +260,7 @@
 		4FD716145B670FEE0052C135 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				43542493FB8C9A3D9B64B4B2 /* Pods_AliasApp.framework */,
+				4429DE70B66F652807011438 /* Pods_AliasApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,7 +271,6 @@
 				D1D075533B25A006C56C2F79 /* Pods-AliasApp.debug.xcconfig */,
 				05A3C76C1251622C4099DB24 /* Pods-AliasApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -305,6 +328,7 @@
 		AAC39C752A1410D300B47B3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1E665B152A20D3C100D0FA14 /* SwapCards */,
 				397F66282A1E6FE200BFE34F /* Rules */,
 				AAC39C792A14117300B47B3A /* App Settings */,
 				AAC39C762A1410DA00B47B3A /* Main Menu */,
@@ -521,7 +545,7 @@
 			);
 			mainGroup = AAC39C4F2A140EFA00B47B3A;
 			packageReferences = (
-				AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit.git" */,
+				AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AAC39CD72A15699000B47B3A /* XCRemoteSwiftPackageReference "LetterAvatarKit" */,
 			);
 			productRefGroup = AAC39C592A140EFA00B47B3A /* Products */;
@@ -637,10 +661,12 @@
 				AAC39CEE2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift in Sources */,
 				AACE5D6C2A1A2E4700C30E0E /* AppSettingsViewModel.swift in Sources */,
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
+				1E665B1A2A20D3C100D0FA14 /* WordsCardContentView.swift in Sources */,
 				AAC39CEC2A168C4F00B47B3A /* WordpackGeneral.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
 				394C91DC2A20C83F00E8ECCC /* RoundResultsViewController.swift in Sources */,
+				1E665B1C2A20D3C100D0FA14 /* SwapCardsViewModel.swift in Sources */,
 				AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
 				AACE5D6E2A1A432A00C30E0E /* TitleWithSegmentControl.swift in Sources */,
@@ -654,6 +680,7 @@
 				AAC39CB02A15602D00B47B3A /* TitleWithImageTableViewCell.swift in Sources */,
 				AAC39C5C2A140EFA00B47B3A /* AppDelegate.swift in Sources */,
 				AAC39CFC2A16A35600B47B3A /* WordpackCities.swift in Sources */,
+				1E665B1B2A20D3C100D0FA14 /* SwapCardsViewController.swift in Sources */,
 				AAC39CF22A16957900B47B3A /* SelectWordPackViewModel.swift in Sources */,
 				AAC39C722A14103500B47B3A /* SceneDelegate.swift in Sources */,
 				394C91DD2A20C83F00E8ECCC /* RoundResultsViewModel.swift in Sources */,
@@ -877,7 +904,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
+		AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -898,7 +925,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		AAC39C922A1415C600B47B3A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = AAC39C912A1415C600B47B3A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 		AAC39CD82A15699000B47B3A /* LetterAvatarKit */ = {

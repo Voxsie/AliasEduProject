@@ -73,14 +73,15 @@ class TeamListVewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        let vm = RoundCountedWordsViewModel(teams: viewModel.teams, wordPack: viewModel.wordPack)
-        let vc = RoundCountedWordsViewController(withViewModel: vm)
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vm = RoundCountedWordsViewModel(teams: viewModel.teams, wordPack: viewModel.wordPack)
+//        let vc = RoundCountedWordsViewController(withViewModel: vm)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.dismiss(animated: false)
     }
     
     private func setupNavigationController() {
         self.navigationController?.navigationBar.tintColor = .white
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem()
     }
 }
 

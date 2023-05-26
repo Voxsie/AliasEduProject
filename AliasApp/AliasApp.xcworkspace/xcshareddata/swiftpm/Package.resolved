@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "letteravatarkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vpeschenkov/LetterAvatarKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "21a6abe52835dbbb3e1c1fc91ae7275673733b36"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "version" : "5.6.0"
+      }
+    }
+  ],
+  "version" : 2
+}

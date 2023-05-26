@@ -101,7 +101,7 @@ class RoundResultsViewController: UIViewController {
     
     private func setupNavigationController() {
         self.navigationController?.navigationBar.tintColor = .white
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem()
     }
 }
 

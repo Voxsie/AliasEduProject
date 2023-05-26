@@ -8,8 +8,14 @@
 import Foundation
 import UIKit
 
-struct Team {
+class Team {
     var id: UUID
     var name: String
     var score: Double
+    
+    init(id: UUID, name: String, score: Double) {
+        self.id = id
+        self.name = name
+        self.score = score
+    }
 }

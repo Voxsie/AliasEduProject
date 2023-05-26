@@ -74,8 +74,11 @@ class GameSettingsViewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        let vm = TeamListViewModel(teams: viewModel.teams, wordPack: viewModel.wordPack, gameSettings: viewModel.model)
-        let vc = TeamListVewController(withViewModel: vm)
+        let vm = SwapCardsViewModel(roundSeconds: viewModel.model.timePerRound,
+                                    words: viewModel.wordPack.words,
+                                    teams: viewModel.teams,
+                                    maxScore: Int(viewModel.model.pointsToWin))
+        let vc = SwapCardsViewController(withViewModel: vm)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -97,7 +100,8 @@ extension GameSettingsViewController: UITableViewDelegate, UITableViewDataSource
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
             else { fatalError() }
             cell.index = indexPath.row
-            cell.configure(indexPathRow: indexPath.row, title: "Длительность раунда", minValue: 30, maxValue: 90, currentValue: viewModel.model.timePerRound)
+            cell.configure(indexPathRow: indexPath.row, title: "Длительность раунда", minValue: 30, maxValue: 90,
+                           currentValue: viewModel.model.timePerRound)
             cell.delegate = self
             cell.selectionStyle = .none
             return cell
@@ -105,7 +109,8 @@ extension GameSettingsViewController: UITableViewDelegate, UITableViewDataSource
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithStepperTableViewCell.reuseID, for: indexPath) as? TitleWithStepperTableViewCell
             else { fatalError() }
             cell.index = indexPath.row
-            cell.configure(indexPathRow: indexPath.row, title: "Очков для победы", minValue: 30, maxValue: 150, currentValue: viewModel.model.pointsToWin)
+            cell.configure(indexPathRow: indexPath.row, title: "Очков для победы", minValue: 30, maxValue: 150,
+                           currentValue: Int(viewModel.model.pointsToWin))
             cell.delegate = self
             cell.selectionStyle = .none
             return cell
@@ -130,7 +135,7 @@ extension GameSettingsViewController: StepperDelegate, SwitcherDelegate {
     
     func didValueChanged(on index: Int, with value: Double) {
         switch(index) {
-        case 0: viewModel.model.timePerRound = value
+        case 0: viewModel.model.timePerRound = Int(value)
         case 1: viewModel.model.pointsToWin = value
         default: break
         }

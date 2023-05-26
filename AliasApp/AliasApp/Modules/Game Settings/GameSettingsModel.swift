@@ -8,7 +8,7 @@
 import Foundation
 
 struct GameSettingsModel {
-    var timePerRound: Double
+    var timePerRound: Int
     var pointsToWin: Double
     var isSubtract: Bool
 }

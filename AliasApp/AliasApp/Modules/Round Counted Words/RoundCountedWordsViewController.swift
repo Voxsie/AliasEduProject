@@ -31,7 +31,6 @@ class RoundCountedWordsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupNavigationController()
         setupView()
     }
@@ -73,28 +72,35 @@ class RoundCountedWordsViewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        let vm = RoundResultsViewModel(teams: viewModel.teams)
-        let vc = RoundResultsViewController(withViewModel: vm)
-        self.navigationController?.pushViewController(vc, animated: true)
+        if viewModel.addPoints() {
+            let vm = RoundResultsViewModel(teams: viewModel.teams)
+            let vc = RoundResultsViewController(withViewModel: vm)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vm = TeamListViewModel(teams: viewModel.teams)
+            let vc = TeamListVewController(withViewModel: vm)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     private func setupNavigationController() {
         self.navigationController?.navigationBar.tintColor = .white
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem()
     }
 }
 
 extension RoundCountedWordsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.wordPack.count()
+        viewModel.words.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSwitchTableViewCell.reuseID, for: indexPath) as? TitleWithSwitchTableViewCell
         else { fatalError() }
         cell.index = indexPath.row
-        cell.configure(indexPathRow: indexPath.row, title: viewModel.wordPack.words[indexPath.row].russian, switchState: true)
+        let word = viewModel.words[indexPath.row]
+        cell.configure(indexPathRow: indexPath.row, title: word.0, switchState: word.1)
         cell.selectionStyle = .none
         cell.delegate = self
         return cell
@@ -104,11 +110,9 @@ extension RoundCountedWordsViewController: UITableViewDelegate, UITableViewDataS
 }
 
 extension RoundCountedWordsViewController: SwitcherDelegate {
-    
+
     func didValueChanged(with index: Int, value: Bool) {
-        print(index)
-        print(value)
+        viewModel.words[index].state = value
     }
-    
     
 }
