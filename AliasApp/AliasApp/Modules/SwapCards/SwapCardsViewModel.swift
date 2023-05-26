@@ -17,12 +17,14 @@ class SwapCardsViewModel {
     var currentTeam: Int = 0
     var maxScore: Int
     var teamName: String = ""
+    var language: Language = .russian
     
     init(roundSeconds: Int, words: [Word], teams: [Team], maxScore: Int) {
         self.roundSeconds = roundSeconds
         self.words = words
         self.teams = teams
         self.maxScore = maxScore
+        self.language = DataManager.shared.getLanguage()
     }
     
     func setWordTo(state: Bool) {
@@ -32,7 +34,13 @@ class SwapCardsViewModel {
     }
     
     func getRandomWord() -> String {
-        let word = words[Int.random(in: 0..<words.count)].russian
+        var word: String
+        switch(language) {
+        case .russian:
+            word = words[Int.random(in: 0..<words.count)].russian
+        case .english:
+            word = words[Int.random(in: 0..<words.count)].english
+        }
         givenWord = word
         return word
     }
