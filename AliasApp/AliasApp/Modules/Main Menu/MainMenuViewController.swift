@@ -130,6 +130,7 @@ class MainMenuViewController: UIViewController {
         rulesButton.snp.makeConstraints { make in
             make.height.equalTo(50)
         }
+        rulesButton.addTarget(self, action: #selector(openRules), for: .touchUpInside)
     }
     
     private func setupNavigationController() {
@@ -149,6 +150,13 @@ class MainMenuViewController: UIViewController {
     private func openSettings() {
         let vm = AppSettingsViewModel()
         let vc = AppSettingsViewController(withViewModel: vm)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc
+    private func openRules() {
+        let vm = RulesViewModel()
+        let vc = RulesViewController(withViewModel: vm)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
