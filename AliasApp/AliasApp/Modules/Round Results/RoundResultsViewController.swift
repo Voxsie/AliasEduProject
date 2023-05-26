@@ -47,6 +47,11 @@ class RoundResultsViewController: UIViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        SoundManager.shared.playSound(sound: .victory)
+    }
+    
     init(withViewModel viewModel: RoundResultsViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel

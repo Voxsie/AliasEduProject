@@ -12,4 +12,7 @@ enum Sound: String {
     case clockTicking = "clockTicking"
     case commonWord = "commonWord"
     case victory = "victory"
+    case roundEnd = ""
+    case skipWord = " "
+    case guessedWord = "  "
 }

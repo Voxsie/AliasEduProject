@@ -111,9 +111,12 @@ class SwapCardsViewController: UIViewController {
     @objc func timerCounter() -> Void {
         if count == 15 {
             timeLabel.textColor = .red
+            SoundManager.shared.playSound(sound: .clockTicking)
         }
         if count == 0 {
             timer.invalidate()
+            SoundManager.shared.pause()
+            SoundManager.shared.playSound(sound: .roundEnd)
             let vm = RoundCountedWordsViewModel(teams: viewModel.teams,
                                                 words: viewModel.guessedWords,
                                                 currentTeamIndex: viewModel.currentTeam,
@@ -191,6 +194,8 @@ extension SwapCardsViewController: SwipeCardStackDataSource {
 
 extension SwapCardsViewController: SwipeCardStackDelegate {
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
+        if direction == .right { SoundManager.shared.playSound(sound: .guessedWord) }
+        else { SoundManager.shared.playSound(sound: .skipWord)}
         viewModel.setWordTo(state: direction == .right)
         if index == 7 {
             cardStack.reloadData()
