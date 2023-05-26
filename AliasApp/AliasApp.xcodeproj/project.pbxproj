@@ -13,6 +13,9 @@
 		397F66222A1E40D800BFE34F /* buttonTapping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F661E2A1E40D800BFE34F /* buttonTapping.mp3 */; };
 		397F66232A1E40D800BFE34F /* clockTicking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F661F2A1E40D800BFE34F /* clockTicking.mp3 */; };
 		397F66242A1E40D800BFE34F /* commonWord.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F66202A1E40D800BFE34F /* commonWord.mp3 */; };
+		39AA080E2A20B0FE00123E35 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AA080A2A20B0FE00123E35 /* RulesViewController.swift */; };
+		39AA080F2A20B0FE00123E35 /* ParagraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AA080C2A20B0FE00123E35 /* ParagraphView.swift */; };
+		39AA08102A20B0FE00123E35 /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AA080D2A20B0FE00123E35 /* RulesViewModel.swift */; };
 		446482692A1FD9C80020912F /* RoundCountedWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446482682A1FD9C80020912F /* RoundCountedWordsViewModel.swift */; };
 		4464826B2A1FDA430020912F /* RoundCountedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464826A2A1FDA430020912F /* RoundCountedWordsViewController.swift */; };
 		4464826E2A1FF15D0020912F /* RoundResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464826D2A1FF15D0020912F /* RoundResultsViewController.swift */; };
@@ -87,6 +90,9 @@
 		397F661E2A1E40D800BFE34F /* buttonTapping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonTapping.mp3; sourceTree = "<group>"; };
 		397F661F2A1E40D800BFE34F /* clockTicking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clockTicking.mp3; sourceTree = "<group>"; };
 		397F66202A1E40D800BFE34F /* commonWord.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = commonWord.mp3; sourceTree = "<group>"; };
+		39AA080A2A20B0FE00123E35 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		39AA080C2A20B0FE00123E35 /* ParagraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphView.swift; sourceTree = "<group>"; };
+		39AA080D2A20B0FE00123E35 /* RulesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
 		446482682A1FD9C80020912F /* RoundCountedWordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCountedWordsViewModel.swift; sourceTree = "<group>"; };
 		4464826A2A1FDA430020912F /* RoundCountedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCountedWordsViewController.swift; sourceTree = "<group>"; };
 		4464826D2A1FF15D0020912F /* RoundResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundResultsViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +192,24 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		39AA08092A20B0FE00123E35 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				39AA080B2A20B0FE00123E35 /* Views */,
+				39AA080A2A20B0FE00123E35 /* RulesViewController.swift */,
+				39AA080D2A20B0FE00123E35 /* RulesViewModel.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		39AA080B2A20B0FE00123E35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39AA080C2A20B0FE00123E35 /* ParagraphView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		446482672A1FD7F90020912F /* Round Counted Words */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +280,7 @@
 		AAC39C752A1410D300B47B3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				39AA08092A20B0FE00123E35 /* Rules */,
 				AAC39C792A14117300B47B3A /* App Settings */,
 				AAC39C762A1410DA00B47B3A /* Main Menu */,
 				AAC39C772A14110A00B47B3A /* Team */,
@@ -534,6 +559,7 @@
 				AAC39CAC2A155B2D00B47B3A /* MainScreenViewModel.swift in Sources */,
 				AAC39CFA2A16A32700B47B3A /* LoaderView.swift in Sources */,
 				AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */,
+				39AA08102A20B0FE00123E35 /* RulesViewModel.swift in Sources */,
 				AACE5D632A1950D900C30E0E /* TitleWithSwitchTableViewCell.swift in Sources */,
 				AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */,
 				AAC39CAE2A155CDA00B47B3A /* MakeTeamsViewController.swift in Sources */,
@@ -542,6 +568,8 @@
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
 				AAC39CEC2A168C4F00B47B3A /* WordpackGeneral.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
+				39AA080F2A20B0FE00123E35 /* ParagraphView.swift in Sources */,
+				39AA080E2A20B0FE00123E35 /* RulesViewController.swift in Sources */,
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
 				AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
