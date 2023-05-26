@@ -149,7 +149,6 @@ class SwapCardsViewController: UIViewController {
     @objc func timerCounter() -> Void {
         if count == 15 {
             timeLabel.textColor = .red
-            SoundManager.shared.playSound(sound: .clockTicking)
         }
         if count == 0 {
             timer.invalidate()
