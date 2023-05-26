@@ -18,7 +18,7 @@ class TitleWithSwitchTableViewCell: UITableViewCell {
     weak var delegate: SwitcherDelegate?
     
     var index: Int = 0
-    
+     
     fileprivate lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

@@ -25,6 +25,9 @@ class AppSettingsViewController: UIViewController {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.register(TitleWithSwitchTableViewCell.self, forCellReuseIdentifier: TitleWithSwitchTableViewCell.reuseID)
         tv.register(TitleWithSegmentControlTableViewCell.self, forCellReuseIdentifier: TitleWithSegmentControlTableViewCell.reuseID)
+        
+        tv.dataSource = self
+        tv.delegate = self
         return tv
     }()
     
@@ -52,9 +55,7 @@ class AppSettingsViewController: UIViewController {
         view.backgroundColor = .generalYellow
         
         navigationItem.titleView = titleView
-        
-        tableView.dataSource = self
-        tableView.delegate = self
+
         tableView.backgroundColor = .generalYellow
         
         view.addSubview(tableView)
@@ -74,7 +75,7 @@ class AppSettingsViewController: UIViewController {
     
     @objc
     private func saveSettings() {
-        //
+        viewModel.saveData()
     }
     
     private func setupNavigationController() {
@@ -94,7 +95,17 @@ extension AppSettingsViewController: UITableViewDelegate, UITableViewDataSource 
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSegmentControlTableViewCell.reuseID) as? TitleWithSegmentControlTableViewCell
             else { return UITableViewCell() }
-            cell.configure(indexPathRow: indexPath.row, title: "Язык", states: ["Русский", "Английский"])
+            cell.configure(indexPathRow: indexPath.row, title: "Язык", states: ["Русский", "Английский"], selectedLanguage: viewModel.language)
+            cell.delegate = self
+            cell.selectionStyle = .none
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleWithSwitchTableViewCell.reuseID, for: indexPath) as? TitleWithSwitchTableViewCell
+            else { return UITableViewCell() }
+            cell.index = indexPath.row
+            cell.configure(indexPathRow: indexPath.row, title: "Звук", switchState: viewModel.isEnabledSound)
+            cell.delegate = self
+            cell.selectionStyle = .none
             return cell
         default:
             let cell = UITableViewCell()
@@ -102,5 +113,18 @@ extension AppSettingsViewController: UITableViewDelegate, UITableViewDataSource 
             cell.separatorInset = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.width, bottom: 0, right: 0)
             return cell
         }
+    }
+}
+
+extension AppSettingsViewController: SegmentControlDelegate {
+    func didValueChanged(with index: Int, value: Int) {
+        viewModel.language = value == 0 ? .russian : .english
+    }
+}
+
+extension AppSettingsViewController: SwitcherDelegate {
+    func didValueChanged(with index: Int, value: Bool) {
+        viewModel.isEnabledSound = value
+        print(viewModel.isEnabledSound)
     }
 }
