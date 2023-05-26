@@ -76,11 +76,19 @@ class AppSettingsViewController: UIViewController {
     @objc
     private func saveSettings() {
         viewModel.saveData()
+        showOkAlert()
     }
     
     private func setupNavigationController() {
         self.navigationController?.navigationBar.tintColor = .white
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    private func showOkAlert() {
+        let alert = UIAlertController(title: "Настройки", message: "Настройки успешно изменены!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Готово", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
 }
 
