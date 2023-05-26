@@ -7,15 +7,15 @@
 import Foundation
 import UIKit
 
-//protocol SwitcherDelegate: AnyObject {
-//    func didValueChanged(with index: Int, value: Bool)
-//}
+protocol SegmentControlDelegate: AnyObject {
+    func didValueChanged(with index: Int, value: Int)
+}
 
 class TitleWithSegmentControlTableViewCell: UITableViewCell {
     
-    static var reuseID = String(describing: TitleWithSwitchTableViewCell.self)
+    static var reuseID = String(describing: TitleWithSegmentControlTableViewCell.self)
     
-    weak var delegate: SwitcherDelegate?
+    weak var delegate: SegmentControlDelegate?
     
     var index: Int = 0
     
@@ -62,13 +62,13 @@ class TitleWithSegmentControlTableViewCell: UITableViewCell {
     
     @objc
     private func switcherValueChanged() {
-        //
+        delegate?.didValueChanged(with: index, value: segmentControl.selectedSegmentIndex)
     }
     
-    func configure(indexPathRow: Int, title: String, states: [String]) {
+    func configure(indexPathRow: Int, title: String, states: [String], selectedLanguage: Language) {
         index = indexPathRow
         titleLabel.text = title
-        segmentControl
+        segmentControl.selectedSegmentIndex = selectedLanguage == .russian ? 0 : 1
         states.enumerated().forEach { index, item in
             segmentControl.setTitle(item, forSegmentAt: index)
         }
