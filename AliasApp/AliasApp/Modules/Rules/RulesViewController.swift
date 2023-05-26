@@ -9,9 +9,15 @@ import UIKit
 import SnapKit
 
 class RulesViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    private var paragraphs: [Paragraph] = []
+    
+    private lazy var mainView = RulesView()
+    
     var viewModel: RulesViewModel!
     
+    // MARK: - UI
     private lazy var titleView: UILabel = {
         let label = UILabel()
         label.text = "Правила"
@@ -21,21 +27,7 @@ class RulesViewController: UIViewController {
         return label
     }()
     
-    private lazy var titleLabel: UILabel = {
-       let label = UILabel()
-        label.text = "Alias"
-        label.textColor = .generalBlack
-        label.font = .monoton(size: 64)
-        return label
-    }()
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupNavigationController()
-        setupView()
-    }
-    
+    // MARK: - Initializers
     init(withViewModel viewModel: RulesViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
@@ -45,44 +37,91 @@ class RulesViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupView() {
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        view.backgroundColor = .generalYellow
-        navigationItem.titleView = titleView
+        configure()
+    }
+    
+    override func loadView() {
+        view = mainView
+    }
+    
+    // MARK: - Configuration
+    private func configure() {
+        getData()
+        mainView.configure()
+        setupNavigationController()
         
-        view.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(view.snp.centerX)
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(-20)
-        }
-        
-        let constraint = (UIScreen.main.bounds.width - 264) / 8
-        
-        let images = [#imageLiteral(resourceName: "target"), #imageLiteral(resourceName: "forbidden"), #imageLiteral(resourceName: "favourite-star"), #imageLiteral(resourceName: "award")]
-        let titles = ["Цель", "Запрещено", "Очки", "Победа"]
-        let strings =
-        ["Каждый игрок должен объяснить как можно больше слов своим товарищам по команде за ограниченное время.",
-         "При объяснении слов нельзя упоминать какую-либо часть слова, а также переводить с других языков.",
-         "За отгаданное слово команда получает одно очко, но за пропущенное слово команда теряет одно очко",
-         "Чтобы победить в игре, команда должна набрать заранее определенное количество очков."
-        ]
-        
-        for i in 0..<4 {
-            let paragraphView = ParagraphView(image: images[i],
-                                              title: titles[i],
-                                              text: strings[i])
-            
-            view.addSubview(paragraphView)
-            paragraphView.snp.makeConstraints { make in
-                make.left.right.equalToSuperview().inset(constraint)
-                make.top.equalTo(titleLabel.snp.bottom).offset(100*i+20)
-            }
-        }
-        
+        mainView.paragraphsCollectionView.delegate = self
+        mainView.paragraphsCollectionView.dataSource = self
+        mainView.paragraphsCollectionView.register(ParagraphCollectionViewCell.self, forCellWithReuseIdentifier: "ParagraphCollectionViewCell")
+    }
+    
+    // MARK: - Private Functions
+    private func getData() {
+        self.paragraphs = Paragraph.paragraphs
     }
     
     private func setupNavigationController() {
         self.navigationController?.navigationBar.tintColor = .white
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        navigationItem.titleView = titleView
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension RulesViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = mainView.paragraphsCollectionView.dequeueReusableCell(withReuseIdentifier: "ParagraphCollectionViewCell", for: indexPath) as? ParagraphCollectionViewCell else { return UICollectionViewCell() }
+        
+        let paragraph = paragraphs[indexPath.row]
+        cell.configure(with: paragraph)
+        
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension RulesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let detailVC = DetailViewController(event: events[indexPath.row])
+//
+//        let fullTitle = events[indexPath.row].name
+//        let index = fullTitle.index(fullTitle.startIndex, offsetBy: 20)
+//        let title = String("\(fullTitle[..<index])...")
+//
+//        detailVC.navigationItem.title = title
+//
+//        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        mainView.pageControl.set(progress: indexPath.row, animated: true)
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension RulesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width - 40, height: 500)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
     }
 }
