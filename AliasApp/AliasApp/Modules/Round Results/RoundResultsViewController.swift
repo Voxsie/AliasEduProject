@@ -38,7 +38,7 @@ class RoundResultsViewController: UIViewController {
         return tv
     }()
     
-    private lazy var continueButton = PrimaryButton(with: "Сыграть еще раз", type: .purple, image: "", animated: false)
+    private lazy var continueButton = PrimaryButton(with: "Выйти в меню", type: .purple, image: "", animated: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,12 +101,12 @@ class RoundResultsViewController: UIViewController {
     
     @objc
     private func goNextStep() {
-        
+        AppCoordinator.shared.start()
     }
     
     private func setupNavigationController() {
         self.navigationController?.navigationBar.tintColor = .white
-        navigationItem.backBarButtonItem = UIBarButtonItem()
+        navigationItem.leftBarButtonItem = UIBarButtonItem()
     }
 }
 

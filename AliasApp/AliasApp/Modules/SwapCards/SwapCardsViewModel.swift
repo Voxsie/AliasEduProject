@@ -16,6 +16,7 @@ class SwapCardsViewModel {
     var teams: [Team]
     var currentTeam: Int = 0
     var maxScore: Int
+    var teamName: String = ""
     
     init(roundSeconds: Int, words: [Word], teams: [Team], maxScore: Int) {
         self.roundSeconds = roundSeconds
@@ -41,6 +42,7 @@ class SwapCardsViewModel {
         guessedWords = []
         if currentTeam == teams.count - 1 { currentTeam = 0 }
         else { currentTeam += 1 }
+        teamName = teams[currentTeam].name
     }
     
 }

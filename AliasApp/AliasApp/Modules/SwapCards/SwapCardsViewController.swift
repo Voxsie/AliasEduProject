@@ -34,6 +34,14 @@ class SwapCardsViewController: UIViewController {
         return label
     }()
     
+    private lazy var teamNameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 24, weight: .semibold)
+        label.textColor = .white
+        return label
+    }()
+    
     private let cardStack = SwipeCardStack()
     
     // MARK: - Life Cycle
@@ -51,6 +59,7 @@ class SwapCardsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNewGame()
+        teamNameLabel.text = viewModel.teamName
     }
       
     override func viewDidLoad() {
@@ -58,6 +67,7 @@ class SwapCardsViewController: UIViewController {
         viewModel.currentTeam = -1
         setupTimerView()
         setupNavigationController()
+        setupConstraints()
         view.backgroundColor = UIColor(red: 255/255, green: 216/255, blue: 69/255, alpha: 1)
         view.addSubview(cardStack)
         cardStack.snp.makeConstraints { make in
@@ -70,6 +80,14 @@ class SwapCardsViewController: UIViewController {
     }
     
     // MARK: - Setup Functions
+    
+    private func setupConstraints() {
+        view.addSubview(teamNameLabel)
+        teamNameLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(32)
+        }
+    }
     
     private func setupNewGame() {
         setupTimerLogic()
