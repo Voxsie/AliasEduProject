@@ -42,6 +42,12 @@ class SwapCardsViewController: UIViewController {
         return label
     }()
     
+    fileprivate let closeButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "closeButton"), for: .normal)
+        return button
+    }()
+    
     private let cardStack = SwipeCardStack()
     
     // MARK: - Life Cycle
@@ -117,7 +123,21 @@ class SwapCardsViewController: UIViewController {
     }
     
     private func setupNavigationController() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem()
+        closeButton.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: closeButton)
+    }
+    
+    @objc
+    private func dismissViewController() {
+        let alert = UIAlertController(title: "Выход из игры", message: "Вы уверены, что хотите покинуть игру?", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Покинуть", style: .cancel) { [weak self] _ in
+            self?.timer.invalidate()
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+        alert.addAction(dismissAction)
+        let continueAction = UIAlertAction(title: "Продолжить", style: .default, handler: nil)
+        alert.addAction(continueAction)
+        self.present(alert, animated: true)
     }
     
     private func setupTimerLogic() {

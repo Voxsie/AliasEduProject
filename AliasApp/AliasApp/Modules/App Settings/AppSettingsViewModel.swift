@@ -21,7 +21,5 @@ final class AppSettingsViewModel {
     func saveData() {
         DataManager.shared.saveLanguage(language)
         DataManager.shared.saveSoundState(isEnabledSound)
-        
-        
     }
 }
