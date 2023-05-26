@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		394C91DC2A20C83F00E8ECCC /* RoundResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91D72A20C83F00E8ECCC /* RoundResultsViewController.swift */; };
+		394C91DD2A20C83F00E8ECCC /* RoundResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91D82A20C83F00E8ECCC /* RoundResultsViewModel.swift */; };
+		394C91DE2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91DA2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift */; };
+		394C91DF2A20C83F00E8ECCC /* RoundCountedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C91DB2A20C83F00E8ECCC /* RoundCountedWordsViewController.swift */; };
 		397F66172A1E404C00BFE34F /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F66162A1E404C00BFE34F /* SoundManager.swift */; };
 		397F661B2A1E40A600BFE34F /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F661A2A1E40A600BFE34F /* Sound.swift */; };
 		397F66212A1E40D800BFE34F /* victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397F661D2A1E40D800BFE34F /* victory.mp3 */; };
@@ -80,6 +84,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		394C91D72A20C83F00E8ECCC /* RoundResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundResultsViewController.swift; sourceTree = "<group>"; };
+		394C91D82A20C83F00E8ECCC /* RoundResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundResultsViewModel.swift; sourceTree = "<group>"; };
+		394C91DA2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCountedWordsViewModel.swift; sourceTree = "<group>"; };
+		394C91DB2A20C83F00E8ECCC /* RoundCountedWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCountedWordsViewController.swift; sourceTree = "<group>"; };
 		397F66162A1E404C00BFE34F /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		397F661A2A1E40A600BFE34F /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		397F661D2A1E40D800BFE34F /* victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = victory.mp3; sourceTree = "<group>"; };
@@ -165,6 +173,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		394C91D62A20C83F00E8ECCC /* Round Results */ = {
+			isa = PBXGroup;
+			children = (
+				394C91D72A20C83F00E8ECCC /* RoundResultsViewController.swift */,
+				394C91D82A20C83F00E8ECCC /* RoundResultsViewModel.swift */,
+			);
+			path = "Round Results";
+			sourceTree = "<group>";
+		};
+		394C91D92A20C83F00E8ECCC /* Round Counted Words */ = {
+			isa = PBXGroup;
+			children = (
+				394C91DA2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift */,
+				394C91DB2A20C83F00E8ECCC /* RoundCountedWordsViewController.swift */,
+			);
+			path = "Round Counted Words";
+			sourceTree = "<group>";
+		};
 		397F66152A1E404000BFE34F /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +288,8 @@
 				AAC39C7A2A14117E00B47B3A /* Game Settings */,
 				AACE5D662A19676F00C30E0E /* Team List */,
 				AAC39C7B2A14118F00B47B3A /* Game */,
+				394C91D92A20C83F00E8ECCC /* Round Counted Words */,
+				394C91D62A20C83F00E8ECCC /* Round Results */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -533,14 +561,17 @@
 				AAC39CFA2A16A32700B47B3A /* LoaderView.swift in Sources */,
 				AAC39C832A1411C700B47B3A /* GameSettingsViewController.swift in Sources */,
 				AACE5D632A1950D900C30E0E /* TitleWithSwitchTableViewCell.swift in Sources */,
+				394C91DF2A20C83F00E8ECCC /* RoundCountedWordsViewController.swift in Sources */,
 				AAC39CD62A1568B300B47B3A /* MakeTeamViewModel.swift in Sources */,
 				AAC39CAE2A155CDA00B47B3A /* MakeTeamsViewController.swift in Sources */,
+				394C91DE2A20C83F00E8ECCC /* RoundCountedWordsViewModel.swift in Sources */,
 				AAC39CEE2A168CCB00B47B3A /* ImageWithTitleTableViewCell.swift in Sources */,
 				AACE5D6C2A1A2E4700C30E0E /* AppSettingsViewModel.swift in Sources */,
 				AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */,
 				AAC39CEC2A168C4F00B47B3A /* WordpackGeneral.swift in Sources */,
 				AAC39C852A1411CF00B47B3A /* GameViewController.swift in Sources */,
 				AAC39C7D2A1411A500B47B3A /* AppSettingsViewController.swift in Sources */,
+				394C91DC2A20C83F00E8ECCC /* RoundResultsViewController.swift in Sources */,
 				AAC39CF42A169EDD00B47B3A /* GameSettingsViewModel.swift in Sources */,
 				AAC39C962A141CE700B47B3A /* PrimaryButton.swift in Sources */,
 				AACE5D6E2A1A432A00C30E0E /* TitleWithSegmentControl.swift in Sources */,
@@ -556,6 +587,7 @@
 				AAC39CFC2A16A35600B47B3A /* WordpackCities.swift in Sources */,
 				AAC39CF22A16957900B47B3A /* SelectWordPackViewModel.swift in Sources */,
 				AAC39C722A14103500B47B3A /* SceneDelegate.swift in Sources */,
+				394C91DD2A20C83F00E8ECCC /* RoundResultsViewModel.swift in Sources */,
 				AACE5D682A19678400C30E0E /* TeamListVewController.swift in Sources */,
 				AACE5D6A2A1967EB00C30E0E /* TeamListViewModel.swift in Sources */,
 				AAC39C812A1411BE00B47B3A /* SelectWordPackViewController.swift in Sources */,

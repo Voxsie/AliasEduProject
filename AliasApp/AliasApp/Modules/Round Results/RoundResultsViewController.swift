@@ -1,22 +1,33 @@
 //
-//  TeamListVewController.swift
+//  RoundCountedWordsViewController.swift
 //  AliasApp
 //
-//  Created by Илья Желтиков on 20.05.2023.
+//  Created by Арслан Рашидов on 25.05.2023.
 //
 
 import UIKit
 
-class TeamListVewController: UIViewController {
+class RoundResultsViewController: UIViewController {
     
-    var viewModel: TeamListViewModel!
+    var viewModel: RoundResultsViewModel!
     
     private lazy var titleView: UILabel = {
         let label = UILabel()
-        label.text = "Рейтинг команд"
+        label.text = "Результаты игры"
         label.textColor = .white
         label.textAlignment = .center
         label.font = .TTCommonsBlack(size: 16)
+        return label
+    }()
+    
+    private lazy var winnerTitleView: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Победитель - "
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = .TTCommonsBlack(size: 20)
+        label.backgroundColor = .generalYellow
         return label
     }()
     
@@ -27,7 +38,7 @@ class TeamListVewController: UIViewController {
         return tv
     }()
     
-    private lazy var continueButton = PrimaryButton(with: "Начать раунд", type: .purple, image: "", animated: false)
+    private lazy var continueButton = PrimaryButton(with: "Сыграть еще раз", type: .purple, image: "", animated: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +47,7 @@ class TeamListVewController: UIViewController {
         setupView()
     }
     
-    init(withViewModel viewModel: TeamListViewModel) {
+    init(withViewModel viewModel: RoundResultsViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
     }
@@ -52,13 +63,24 @@ class TeamListVewController: UIViewController {
         
         navigationItem.titleView = titleView
         
+        winnerTitleView.text! += viewModel.winner.name
+        
+        view.addSubview(winnerTitleView)
+        winnerTitleView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(25)
+            make.top.equalTo(view.safeAreaLayoutGuide)
+        }
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .generalYellow
-        
+
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
-            make.leading.trailing.top.bottom.equalToSuperview()
+            make.leading.trailing.bottom.equalToSuperview()
+            make.top.equalTo(winnerTitleView.snp.bottom)
+            //make.width.equalTo(winnerTitleView.snp.width)
         }
         
         view.addSubview(continueButton)
@@ -67,15 +89,14 @@ class TeamListVewController: UIViewController {
             make.height.equalTo(50)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+        
         continueButton.addTarget(self, action: #selector(goNextStep), for: .touchUpInside)
         
     }
     
     @objc
     private func goNextStep() {
-        let vm = RoundCountedWordsViewModel(teams: viewModel.teams, wordPack: viewModel.wordPack)
-        let vc = RoundCountedWordsViewController(withViewModel: vm)
-        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     private func setupNavigationController() {
@@ -84,7 +105,7 @@ class TeamListVewController: UIViewController {
     }
 }
 
-extension TeamListVewController: UITableViewDelegate, UITableViewDataSource {
+extension RoundResultsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.teams.count
