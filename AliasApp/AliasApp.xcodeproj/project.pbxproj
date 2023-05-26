@@ -17,6 +17,9 @@
 		4464826B2A1FDA430020912F /* RoundCountedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464826A2A1FDA430020912F /* RoundCountedWordsViewController.swift */; };
 		4464826E2A1FF15D0020912F /* RoundResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464826D2A1FF15D0020912F /* RoundResultsViewController.swift */; };
 		446482702A1FF16C0020912F /* RoundResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464826F2A1FF16C0020912F /* RoundResultsViewModel.swift */; };
+		397F662A2A1E700D00BFE34F /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F66292A1E700D00BFE34F /* RulesViewController.swift */; };
+		397F662C2A1E741100BFE34F /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F662B2A1E741100BFE34F /* RulesViewModel.swift */; };
+		397F66312A1F78BD00BFE34F /* ParagraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F66302A1F78BD00BFE34F /* ParagraphView.swift */; };
 		AA9BA6542A1D55D70051DA3A /* GameSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9BA6532A1D55D70051DA3A /* GameSettingsModel.swift */; };
 		AAC39C5C2A140EFA00B47B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C5B2A140EFA00B47B3A /* AppDelegate.swift */; };
 		AAC39C602A140EFA00B47B3A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39C5F2A140EFA00B47B3A /* MainMenuViewController.swift */; };
@@ -91,6 +94,9 @@
 		4464826A2A1FDA430020912F /* RoundCountedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCountedWordsViewController.swift; sourceTree = "<group>"; };
 		4464826D2A1FF15D0020912F /* RoundResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundResultsViewController.swift; sourceTree = "<group>"; };
 		4464826F2A1FF16C0020912F /* RoundResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundResultsViewModel.swift; sourceTree = "<group>"; };
+		397F66292A1E700D00BFE34F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		397F662B2A1E741100BFE34F /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
+		397F66302A1F78BD00BFE34F /* ParagraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphView.swift; sourceTree = "<group>"; };
 		AA9BA6532A1D55D70051DA3A /* GameSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsModel.swift; sourceTree = "<group>"; };
 		AAC39C582A140EFA00B47B3A /* AliasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC39C5B2A140EFA00B47B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +208,22 @@
 				4464826F2A1FF16C0020912F /* RoundResultsViewModel.swift */,
 			);
 			path = "Round Results";
+		397F66282A1E6FE200BFE34F /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				397F662D2A1F769F00BFE34F /* Views */,
+				397F66292A1E700D00BFE34F /* RulesViewController.swift */,
+				397F662B2A1E741100BFE34F /* RulesViewModel.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		397F662D2A1F769F00BFE34F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				397F66302A1F78BD00BFE34F /* ParagraphView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AAC39C4F2A140EFA00B47B3A = {
@@ -256,6 +278,7 @@
 		AAC39C752A1410D300B47B3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				397F66282A1E6FE200BFE34F /* Rules */,
 				AAC39C792A14117300B47B3A /* App Settings */,
 				AAC39C762A1410DA00B47B3A /* Main Menu */,
 				AAC39C772A14110A00B47B3A /* Team */,
@@ -529,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC39C702A140F7400B47B3A /* AppCoordinator.swift in Sources */,
+				397F662C2A1E741100BFE34F /* RulesViewModel.swift in Sources */,
 				397F661B2A1E40A600BFE34F /* Sound.swift in Sources */,
 				AAC39CDC2A156DD400B47B3A /* TeamModel.swift in Sources */,
 				AAC39CAC2A155B2D00B47B3A /* MainScreenViewModel.swift in Sources */,
@@ -551,6 +575,8 @@
 				4464826E2A1FF15D0020912F /* RoundResultsViewController.swift in Sources */,
 				AACE5D652A1958B500C30E0E /* TitleWithStepperTableViewCell.swift in Sources */,
 				AAC39C902A14148E00B47B3A /* UIFont.swift in Sources */,
+				397F66312A1F78BD00BFE34F /* ParagraphView.swift in Sources */,
+				397F662A2A1E700D00BFE34F /* RulesViewController.swift in Sources */,
 				AAC39CF02A1691C200B47B3A /* WordpackClothers.swift in Sources */,
 				4464826B2A1FDA430020912F /* RoundCountedWordsViewController.swift in Sources */,
 				AAC39CB02A15602D00B47B3A /* TitleWithImageTableViewCell.swift in Sources */,
