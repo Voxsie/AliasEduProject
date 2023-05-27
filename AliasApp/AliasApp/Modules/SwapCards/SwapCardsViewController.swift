@@ -85,6 +85,11 @@ class SwapCardsViewController: UIViewController {
         cardStack.delegate = self
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer.invalidate()
+    }
+    
     // MARK: - Setup Functions
     
     private func setupConstraints() {
