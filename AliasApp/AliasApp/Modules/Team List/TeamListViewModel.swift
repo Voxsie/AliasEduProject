@@ -11,13 +11,8 @@ final class TeamListViewModel {
     
     var teams: [Team] = []
     
-//    var wordPack: WordPack
-//
-//    var gameSettings: GameSettingsModel
-    
     init(teams: [Team]) {
         self.teams = teams
-//        self.wordPack = wordPack
-//        self.gameSettings = gameSettings
+
     }
 }
